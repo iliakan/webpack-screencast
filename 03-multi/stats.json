@@ -1,0 +1,424 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "1.12.2",
+  "hash": "2faffb738cf8c6fb9057",
+  "time": 801,
+  "publicPath": "",
+  "assetsByChunkName": {
+    "about": "about.js",
+    "home": "home.js",
+    "common": "common.js"
+  },
+  "assets": [
+    {
+      "name": "about.js",
+      "size": 842,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "about"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "home.js",
+      "size": 832,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "home"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "common.js",
+      "size": 10205,
+      "chunks": [
+        2
+      ],
+      "chunkNames": [
+        "common"
+      ],
+      "emitted": true
+    }
+  ],
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": false,
+      "extraAsync": false,
+      "size": 279,
+      "names": [
+        "about"
+      ],
+      "files": [
+        "about.js"
+      ],
+      "hash": "ea29dcd746baee51611a",
+      "parents": [
+        2
+      ],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/about.js",
+          "name": "./about.js",
+          "index": 0,
+          "index2": 2,
+          "size": 279,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": null,
+          "profile": {
+            "factory": 607,
+            "building": 93,
+            "dependencies": 6
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "source": "'use strict';\n\nvar _interopRequireDefault = require('babel-runtime/helpers/interop-require-default')['default'];\n\nvar _welcome = require('./welcome');\n\nvar _welcome2 = _interopRequireDefault(_welcome);\n\n(0, _welcome2['default'])(\"about\");\n\nexports.welcome = _welcome2['default'];"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 0,
+          "module": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/about.js",
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/about.js",
+          "moduleName": "./about.js",
+          "loc": "",
+          "name": "about",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "rendered": true,
+      "initial": true,
+      "entry": false,
+      "extraAsync": false,
+      "size": 278,
+      "names": [
+        "home"
+      ],
+      "files": [
+        "home.js"
+      ],
+      "hash": "b0b1af2cfcbeac09fe16",
+      "parents": [
+        2
+      ],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/home.js",
+          "name": "./home.js",
+          "index": 3,
+          "index2": 3,
+          "size": 278,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": null,
+          "profile": {
+            "factory": 25,
+            "building": 662
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "source": "'use strict';\n\nvar _interopRequireDefault = require('babel-runtime/helpers/interop-require-default')['default'];\n\nvar _welcome = require('./welcome');\n\nvar _welcome2 = _interopRequireDefault(_welcome);\n\n(0, _welcome2['default'])(\"home\");\n\nexports.welcome = _welcome2['default'];"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 0,
+          "module": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/home.js",
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/home.js",
+          "moduleName": "./home.js",
+          "loc": "",
+          "name": "home",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "extraAsync": false,
+      "size": 411,
+      "names": [
+        "common"
+      ],
+      "files": [
+        "common.js"
+      ],
+      "hash": "79641d398277044c2c9a",
+      "parents": [],
+      "modules": [
+        {
+          "id": 1,
+          "identifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/node_modules/babel-runtime/helpers/interop-require-default.js",
+          "name": "/Users/learn/webpack-screencast/code/~/babel-runtime/helpers/interop-require-default.js",
+          "index": 1,
+          "index2": 0,
+          "size": 148,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            2
+          ],
+          "assets": [],
+          "issuer": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/home.js",
+          "profile": {
+            "factory": 24,
+            "building": 55
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 0,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/home.js",
+              "module": "./home.js",
+              "moduleName": "./home.js",
+              "type": "cjs require",
+              "userRequest": "babel-runtime/helpers/interop-require-default",
+              "loc": "3:29-85"
+            },
+            {
+              "moduleId": 0,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/about.js",
+              "module": "./about.js",
+              "moduleName": "./about.js",
+              "type": "cjs require",
+              "userRequest": "babel-runtime/helpers/interop-require-default",
+              "loc": "3:29-85"
+            }
+          ],
+          "source": "\"use strict\";\n\nexports[\"default\"] = function (obj) {\n  return obj && obj.__esModule ? obj : {\n    \"default\": obj\n  };\n};\n\nexports.__esModule = true;"
+        },
+        {
+          "id": 2,
+          "identifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/welcome.js",
+          "name": "./welcome.js",
+          "index": 2,
+          "index2": 1,
+          "size": 263,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            2
+          ],
+          "assets": [],
+          "issuer": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/home.js",
+          "profile": {
+            "factory": 22,
+            "building": 38
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 0,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/home.js",
+              "module": "./home.js",
+              "moduleName": "./home.js",
+              "type": "cjs require",
+              "userRequest": "./welcome",
+              "loc": "5:15-35"
+            },
+            {
+              "moduleId": 0,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/about.js",
+              "module": "./about.js",
+              "moduleName": "./about.js",
+              "type": "cjs require",
+              "userRequest": "./welcome",
+              "loc": "5:15-35"
+            }
+          ],
+          "source": "'use strict';\n\nObject.defineProperty(exports, '__esModule', {\n  value: true\n});\n\nexports['default'] = function (message) {\n\n  if (NODE_ENV == 'development') {\n    console.log(message);\n  }\n\n  alert('Welcome ' + message);\n};\n\n;\nmodule.exports = exports['default'];"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": []
+    }
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/about.js",
+      "name": "./about.js",
+      "index": 0,
+      "index2": 2,
+      "size": 279,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": null,
+      "profile": {
+        "factory": 607,
+        "building": 93,
+        "dependencies": 6
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [],
+      "source": "'use strict';\n\nvar _interopRequireDefault = require('babel-runtime/helpers/interop-require-default')['default'];\n\nvar _welcome = require('./welcome');\n\nvar _welcome2 = _interopRequireDefault(_welcome);\n\n(0, _welcome2['default'])(\"about\");\n\nexports.welcome = _welcome2['default'];"
+    },
+    {
+      "id": 0,
+      "identifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/home.js",
+      "name": "./home.js",
+      "index": 3,
+      "index2": 3,
+      "size": 278,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": null,
+      "profile": {
+        "factory": 25,
+        "building": 662
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [],
+      "source": "'use strict';\n\nvar _interopRequireDefault = require('babel-runtime/helpers/interop-require-default')['default'];\n\nvar _welcome = require('./welcome');\n\nvar _welcome2 = _interopRequireDefault(_welcome);\n\n(0, _welcome2['default'])(\"home\");\n\nexports.welcome = _welcome2['default'];"
+    },
+    {
+      "id": 1,
+      "identifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/node_modules/babel-runtime/helpers/interop-require-default.js",
+      "name": "/Users/learn/webpack-screencast/code/~/babel-runtime/helpers/interop-require-default.js",
+      "index": 1,
+      "index2": 0,
+      "size": 148,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "assets": [],
+      "issuer": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/home.js",
+      "profile": {
+        "factory": 24,
+        "building": 55
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 0,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/home.js",
+          "module": "./home.js",
+          "moduleName": "./home.js",
+          "type": "cjs require",
+          "userRequest": "babel-runtime/helpers/interop-require-default",
+          "loc": "3:29-85"
+        },
+        {
+          "moduleId": 0,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/about.js",
+          "module": "./about.js",
+          "moduleName": "./about.js",
+          "type": "cjs require",
+          "userRequest": "babel-runtime/helpers/interop-require-default",
+          "loc": "3:29-85"
+        }
+      ],
+      "source": "\"use strict\";\n\nexports[\"default\"] = function (obj) {\n  return obj && obj.__esModule ? obj : {\n    \"default\": obj\n  };\n};\n\nexports.__esModule = true;"
+    },
+    {
+      "id": 2,
+      "identifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/welcome.js",
+      "name": "./welcome.js",
+      "index": 2,
+      "index2": 1,
+      "size": 263,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "assets": [],
+      "issuer": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/home.js",
+      "profile": {
+        "factory": 22,
+        "building": 38
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 0,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/home.js",
+          "module": "./home.js",
+          "moduleName": "./home.js",
+          "type": "cjs require",
+          "userRequest": "./welcome",
+          "loc": "5:15-35"
+        },
+        {
+          "moduleId": 0,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/node_modules/babel-loader/index.js?optional[]=runtime!/Users/learn/webpack-screencast/code/project/frontend/about.js",
+          "module": "./about.js",
+          "moduleName": "./about.js",
+          "type": "cjs require",
+          "userRequest": "./welcome",
+          "loc": "5:15-35"
+        }
+      ],
+      "source": "'use strict';\n\nObject.defineProperty(exports, '__esModule', {\n  value: true\n});\n\nexports['default'] = function (message) {\n\n  if (NODE_ENV == 'development') {\n    console.log(message);\n  }\n\n  alert('Welcome ' + message);\n};\n\n;\nmodule.exports = exports['default'];"
+    }
+  ],
+  "filteredModules": 0,
+  "children": []
+}
