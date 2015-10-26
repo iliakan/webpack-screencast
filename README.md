@@ -7,5 +7,5 @@
 Сам скринкаст смотрите на странице: [https://learn.javascript.ru/webpack-screencast](https://learn.javascript.ru/webpack-screencast).
 
 -------------------
-Успешной сборки!
+Успешной сборки!  
 Илья Кантор
