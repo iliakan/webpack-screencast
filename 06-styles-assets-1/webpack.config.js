@@ -1,15 +1,11 @@
 'use strict';
 
-let webpack = require('webpack');
-let bootstrap = require('bootstrap-styl');
-
 module.exports = {
   context: __dirname + '/frontend',
-  entry:   {
-    home: './home'
-  },
+  entry:   './main',
   output:  {
     path:     __dirname + '/public',
+    publicPath: '/',
     filename: '[name].js'
   },
 
@@ -17,29 +13,22 @@ module.exports = {
 
     loaders: [{
       test:   /\.js$/,
-      loader: "babel"
+      loader: "babel?presets[]=es2015"
     }, {
       test:   /\.jade$/,
       loader: "jade"
     }, {
-      // autoprefixer?browsers=last 2 version!
-      test:   /\.styl$/,
-      loader: 'style!css!stylus?resulve urls'
-    }, {
-      test:   /\.css/,
-      loader: 'style!css'
+      test:   /\.css$/,
+      // .../node_modules/css-loader/index.js!.../node_modules/autoprefixer-loader/index.js?browsers=last 2 versions!.../frontend/menu/menu.css
+      loader: 'style!css!autoprefixer?browsers=last 2 versions'
     }, {
       test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
       loader: 'file?name=[path][name].[ext]'
     }]
-  },
 
-  watch: true,
-
-  stylus: {
-    use: [
-      bootstrap()
-    ]
   }
 
 };
+
+
+

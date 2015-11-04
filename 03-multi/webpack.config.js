@@ -12,7 +12,7 @@ module.exports = {
   },
 
   output: {
-    path:     'public',
+    path:     __dirname + '/public',
     filename: "[name].js",
     library:  "[name]"
   },

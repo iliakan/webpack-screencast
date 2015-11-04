@@ -1,0 +1,19 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-loader": "^6.0.0",
+    "css-loader": "^0.21.0",
+    "file-loader": "^0.8.4",
+    "jade-loader": "^0.7.1",
+    "style-loader": "^0.13.0",
+    "stylus-loader": "^1.4.0"
+  }
+}

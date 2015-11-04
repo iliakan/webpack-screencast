@@ -1,0 +1,29 @@
+@import url("~flag-icon-css/css/flag-icon.css");
+
+.menu .title {
+  padding: 0 6px 0 16px;
+
+  background: url(plus.svg) left 1px no-repeat;
+  background-size: 14px;
+
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu .list {
+  display: none;
+  margin: 0;
+}
+
+.menu .list a {
+  color: blue;
+}
+
+.menu.open .list {
+  display: block;
+}
+
+.menu.open .title {
+  background-image: url(minus.svg);
+}
+
