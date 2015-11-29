@@ -1,0 +1,22 @@
+.menu .title {
+  background-image: url(/menu/plus.svg?2a95646906435fee9421ab7e89c7be68);
+  padding: 0 6px 0 16px;
+  background-position: left 1px;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.menu .list {
+  display: none;
+  margin: 0;
+}
+.menu .list a {
+  color: #f00;
+}
+.menu.open .list {
+  display: block;
+}
+.menu.open .title {
+  background-image: url(/menu/minus.svg?2dc8d1e0568e4f4e31a9caf42c2b4b14);
+}

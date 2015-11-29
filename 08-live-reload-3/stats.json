@@ -1,0 +1,804 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "1.12.2",
+  "hash": "375d2b9ccbd9e567cf7c",
+  "time": 1462,
+  "publicPath": "/",
+  "assetsByChunkName": {
+    "main": "main.js"
+  },
+  "assets": [
+    {
+      "name": "plus.svg?2a95646906435fee9421ab7e89c7be68",
+      "size": 397,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "minus.svg?2dc8d1e0568e4f4e31a9caf42c2b4b14",
+      "size": 379,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "main.js",
+      "size": 4008,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "1.1.js",
+      "size": 19592,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [],
+      "emitted": true
+    }
+  ],
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "extraAsync": false,
+      "size": 379,
+      "names": [
+        "main"
+      ],
+      "files": [
+        "main.js"
+      ],
+      "hash": "fb032d10af4b5f4bed99",
+      "parents": [],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/main.js",
+          "name": "./main.js",
+          "index": 0,
+          "index2": 10,
+          "size": 379,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "source": "'use strict';\n\nrequire.ensure([], function (require) {\n\n  var Menu = require('./menu').default;\n  var pandaMenu = new Menu({\n    title: \"Меню панды\",\n    items: [{\n      text: 'Яйца',\n      href: '#eggs'\n    }, {\n      text: 'Мясо',\n      href: '#meat'\n    }, {\n      text: '99% еды - бамбук!',\n      href: '#bamboo'\n    }]\n  });\n\n  document.body.appendChild(pandaMenu.elem);\n});"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 0,
+          "module": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/main.js",
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/main.js",
+          "moduleName": "./main.js",
+          "loc": "",
+          "name": "main",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "extraAsync": false,
+      "size": 18578,
+      "names": [],
+      "files": [
+        "1.1.js"
+      ],
+      "hash": "9d5ab4f5a9c6a5942b15",
+      "parents": [
+        0
+      ],
+      "modules": [
+        {
+          "id": 1,
+          "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/menu/index.js",
+          "name": "./menu/index.js",
+          "index": 1,
+          "index2": 9,
+          "size": 907,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/main.js",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 0,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/main.js",
+              "module": "./main.js",
+              "moduleName": "./main.js",
+              "type": "cjs require",
+              "userRequest": "./menu",
+              "loc": "5:13-30"
+            }
+          ],
+          "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nrequire('./menu.styl');\n\nvar _menu = require('./menu.jade');\n\nvar _menu2 = _interopRequireDefault(_menu);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Menu = function Menu(options) {\n  var _this = this;\n\n  _classCallCheck(this, Menu);\n\n  this.elem = document.createElement('div');\n  this.elem.className = 'menu';\n\n  this.elem.innerHTML = (0, _menu2.default)(options);\n\n  this.titleElem = this.elem.querySelector('.title');\n\n  this.titleElem.onclick = function () {\n    return _this.elem.classList.toggle('open');\n  };\n\n  this.titleElem.onmousedown = function () {\n    return false;\n  };\n};\n\nexports.default = Menu;"
+        },
+        {
+          "id": 2,
+          "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/style-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+          "name": "./menu/menu.styl",
+          "index": 2,
+          "index2": 5,
+          "size": 1087,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/menu/index.js",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/menu/index.js",
+              "module": "./menu/index.js",
+              "moduleName": "./menu/index.js",
+              "type": "cjs require",
+              "userRequest": "./menu.styl",
+              "loc": "7:0-22"
+            }
+          ],
+          "source": "// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// load the styles\nvar content = require(\"!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js?resolve url!./menu.styl\");\nif(typeof content === 'string') content = [[module.id, content, '']];\n// add the styles to the DOM\nvar update = require(\"!./../../node_modules/style-loader/addStyles.js\")(content, {});\nif(content.locals) module.exports = content.locals;\n// Hot Module Replacement\nif(module.hot) {\n\t// When the styles change, update the <style> tags\n\tif(!content.locals) {\n\t\tmodule.hot.accept(\"!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js?resolve url!./menu.styl\", function() {\n\t\t\tvar newContent = require(\"!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js?resolve url!./menu.styl\");\n\t\t\tif(typeof newContent === 'string') newContent = [[module.id, newContent, '']];\n\t\t\tupdate(newContent);\n\t\t});\n\t}\n\t// When the module is disposed, remove the <style> tags\n\tmodule.hot.dispose(function() { update(); });\n}"
+        },
+        {
+          "id": 3,
+          "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+          "name": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+          "index": 3,
+          "index2": 3,
+          "size": 606,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/style-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/style-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+              "module": "./menu/menu.styl",
+              "moduleName": "./menu/menu.styl",
+              "type": "cjs require",
+              "userRequest": "!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js?resolve url!./menu.styl",
+              "loc": "4:14-135"
+            }
+          ],
+          "source": "exports = module.exports = require(\"./../../node_modules/css-loader/lib/css-base.js\")();\n// imports\n\n\n// module\nexports.push([module.id, \".menu .title {\\n  background-image: url(\" + require(\"./plus.svg\") + \");\\n  padding: 0 6px 0 16px;\\n  background-position: left 1px;\\n  background-repeat: no-repeat;\\n  background-size: 14px;\\n  font-weight: bold;\\n  cursor: pointer;\\n}\\n.menu .list {\\n  display: none;\\n  margin: 0;\\n}\\n.menu .list a {\\n  color: #00f;\\n}\\n.menu.open .list {\\n  display: block;\\n}\\n.menu.open .title {\\n  background-image: url(\" + require(\"./minus.svg\") + \");\\n}\\n\", \"\"]);\n\n// exports\n"
+        },
+        {
+          "id": 4,
+          "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/lib/css-base.js",
+          "name": "../~/css-loader/lib/css-base.js",
+          "index": 4,
+          "index2": 0,
+          "size": 1506,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+              "module": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+              "moduleName": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+              "type": "cjs require",
+              "userRequest": "./../../node_modules/css-loader/lib/css-base.js",
+              "loc": "1:27-85"
+            }
+          ],
+          "source": "/*\r\n\tMIT License http://www.opensource.org/licenses/mit-license.php\r\n\tAuthor Tobias Koppers @sokra\r\n*/\r\n// css base code, injected by the css-loader\r\nmodule.exports = function() {\r\n\tvar list = [];\r\n\r\n\t// return the list of modules as css string\r\n\tlist.toString = function toString() {\r\n\t\tvar result = [];\r\n\t\tfor(var i = 0; i < this.length; i++) {\r\n\t\t\tvar item = this[i];\r\n\t\t\tif(item[2]) {\r\n\t\t\t\tresult.push(\"@media \" + item[2] + \"{\" + item[1] + \"}\");\r\n\t\t\t} else {\r\n\t\t\t\tresult.push(item[1]);\r\n\t\t\t}\r\n\t\t}\r\n\t\treturn result.join(\"\");\r\n\t};\r\n\r\n\t// import a list of modules into the list\r\n\tlist.i = function(modules, mediaQuery) {\r\n\t\tif(typeof modules === \"string\")\r\n\t\t\tmodules = [[null, modules, \"\"]];\r\n\t\tvar alreadyImportedModules = {};\r\n\t\tfor(var i = 0; i < this.length; i++) {\r\n\t\t\tvar id = this[i][0];\r\n\t\t\tif(typeof id === \"number\")\r\n\t\t\t\talreadyImportedModules[id] = true;\r\n\t\t}\r\n\t\tfor(i = 0; i < modules.length; i++) {\r\n\t\t\tvar item = modules[i];\r\n\t\t\t// skip already imported module\r\n\t\t\t// this implementation is not 100% perfect for weird media query combinations\r\n\t\t\t//  when a module is imported multiple times with different media queries.\r\n\t\t\t//  I hope this will never occur (Hey this way we have smaller bundles)\r\n\t\t\tif(typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\r\n\t\t\t\tif(mediaQuery && !item[2]) {\r\n\t\t\t\t\titem[2] = mediaQuery;\r\n\t\t\t\t} else if(mediaQuery) {\r\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\r\n\t\t\t\t}\r\n\t\t\t\tlist.push(item);\r\n\t\t\t}\r\n\t\t}\r\n\t};\r\n\treturn list;\r\n};\r\n"
+        },
+        {
+          "id": 5,
+          "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/file-loader/index.js?name=[name].[ext]?[hash]!/Users/learn/webpack-screencast/code/project/frontend/menu/plus.svg",
+          "name": "./menu/plus.svg",
+          "index": 5,
+          "index2": 1,
+          "size": 86,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [
+            "plus.svg?2a95646906435fee9421ab7e89c7be68"
+          ],
+          "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+              "module": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+              "moduleName": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+              "type": "cjs require",
+              "userRequest": "./plus.svg",
+              "loc": "6:70-91"
+            }
+          ],
+          "source": "module.exports = __webpack_public_path__ + \"plus.svg?2a95646906435fee9421ab7e89c7be68\""
+        },
+        {
+          "id": 6,
+          "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/file-loader/index.js?name=[name].[ext]?[hash]!/Users/learn/webpack-screencast/code/project/frontend/menu/minus.svg",
+          "name": "./menu/minus.svg",
+          "index": 6,
+          "index2": 2,
+          "size": 87,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [
+            "minus.svg?2dc8d1e0568e4f4e31a9caf42c2b4b14"
+          ],
+          "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+              "module": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+              "moduleName": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+              "type": "cjs require",
+              "userRequest": "./minus.svg",
+              "loc": "6:440-462"
+            }
+          ],
+          "source": "module.exports = __webpack_public_path__ + \"minus.svg?2dc8d1e0568e4f4e31a9caf42c2b4b14\""
+        },
+        {
+          "id": 7,
+          "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/style-loader/addStyles.js",
+          "name": "../~/style-loader/addStyles.js",
+          "index": 7,
+          "index2": 4,
+          "size": 7212,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/style-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/style-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+              "module": "./menu/menu.styl",
+              "moduleName": "./menu/menu.styl",
+              "type": "cjs require",
+              "userRequest": "!./../../node_modules/style-loader/addStyles.js",
+              "loc": "7:13-71"
+            }
+          ],
+          "source": "/*\r\n\tMIT License http://www.opensource.org/licenses/mit-license.php\r\n\tAuthor Tobias Koppers @sokra\r\n*/\r\nvar stylesInDom = {},\r\n\tmemoize = function(fn) {\r\n\t\tvar memo;\r\n\t\treturn function () {\r\n\t\t\tif (typeof memo === \"undefined\") memo = fn.apply(this, arguments);\r\n\t\t\treturn memo;\r\n\t\t};\r\n\t},\r\n\tisOldIE = memoize(function() {\r\n\t\treturn /msie [6-9]\\b/.test(window.navigator.userAgent.toLowerCase());\r\n\t}),\r\n\tgetHeadElement = memoize(function () {\r\n\t\treturn document.head || document.getElementsByTagName(\"head\")[0];\r\n\t}),\r\n\tsingletonElement = null,\r\n\tsingletonCounter = 0,\r\n\tstyleElementsInsertedAtTop = [];\r\n\r\nmodule.exports = function(list, options) {\r\n\tif(typeof DEBUG !== \"undefined\" && DEBUG) {\r\n\t\tif(typeof document !== \"object\") throw new Error(\"The style-loader cannot be used in a non-browser environment\");\r\n\t}\r\n\r\n\toptions = options || {};\r\n\t// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>\r\n\t// tags it will allow on a page\r\n\tif (typeof options.singleton === \"undefined\") options.singleton = isOldIE();\r\n\r\n\t// By default, add <style> tags to the bottom of <head>.\r\n\tif (typeof options.insertAt === \"undefined\") options.insertAt = \"bottom\";\r\n\r\n\tvar styles = listToStyles(list);\r\n\taddStylesToDom(styles, options);\r\n\r\n\treturn function update(newList) {\r\n\t\tvar mayRemove = [];\r\n\t\tfor(var i = 0; i < styles.length; i++) {\r\n\t\t\tvar item = styles[i];\r\n\t\t\tvar domStyle = stylesInDom[item.id];\r\n\t\t\tdomStyle.refs--;\r\n\t\t\tmayRemove.push(domStyle);\r\n\t\t}\r\n\t\tif(newList) {\r\n\t\t\tvar newStyles = listToStyles(newList);\r\n\t\t\taddStylesToDom(newStyles, options);\r\n\t\t}\r\n\t\tfor(var i = 0; i < mayRemove.length; i++) {\r\n\t\t\tvar domStyle = mayRemove[i];\r\n\t\t\tif(domStyle.refs === 0) {\r\n\t\t\t\tfor(var j = 0; j < domStyle.parts.length; j++)\r\n\t\t\t\t\tdomStyle.parts[j]();\r\n\t\t\t\tdelete stylesInDom[domStyle.id];\r\n\t\t\t}\r\n\t\t}\r\n\t};\r\n}\r\n\r\nfunction addStylesToDom(styles, options) {\r\n\tfor(var i = 0; i < styles.length; i++) {\r\n\t\tvar item = styles[i];\r\n\t\tvar domStyle = stylesInDom[item.id];\r\n\t\tif(domStyle) {\r\n\t\t\tdomStyle.refs++;\r\n\t\t\tfor(var j = 0; j < domStyle.parts.length; j++) {\r\n\t\t\t\tdomStyle.parts[j](item.parts[j]);\r\n\t\t\t}\r\n\t\t\tfor(; j < item.parts.length; j++) {\r\n\t\t\t\tdomStyle.parts.push(addStyle(item.parts[j], options));\r\n\t\t\t}\r\n\t\t} else {\r\n\t\t\tvar parts = [];\r\n\t\t\tfor(var j = 0; j < item.parts.length; j++) {\r\n\t\t\t\tparts.push(addStyle(item.parts[j], options));\r\n\t\t\t}\r\n\t\t\tstylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};\r\n\t\t}\r\n\t}\r\n}\r\n\r\nfunction listToStyles(list) {\r\n\tvar styles = [];\r\n\tvar newStyles = {};\r\n\tfor(var i = 0; i < list.length; i++) {\r\n\t\tvar item = list[i];\r\n\t\tvar id = item[0];\r\n\t\tvar css = item[1];\r\n\t\tvar media = item[2];\r\n\t\tvar sourceMap = item[3];\r\n\t\tvar part = {css: css, media: media, sourceMap: sourceMap};\r\n\t\tif(!newStyles[id])\r\n\t\t\tstyles.push(newStyles[id] = {id: id, parts: [part]});\r\n\t\telse\r\n\t\t\tnewStyles[id].parts.push(part);\r\n\t}\r\n\treturn styles;\r\n}\r\n\r\nfunction insertStyleElement(options, styleElement) {\r\n\tvar head = getHeadElement();\r\n\tvar lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];\r\n\tif (options.insertAt === \"top\") {\r\n\t\tif(!lastStyleElementInsertedAtTop) {\r\n\t\t\thead.insertBefore(styleElement, head.firstChild);\r\n\t\t} else if(lastStyleElementInsertedAtTop.nextSibling) {\r\n\t\t\thead.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);\r\n\t\t} else {\r\n\t\t\thead.appendChild(styleElement);\r\n\t\t}\r\n\t\tstyleElementsInsertedAtTop.push(styleElement);\r\n\t} else if (options.insertAt === \"bottom\") {\r\n\t\thead.appendChild(styleElement);\r\n\t} else {\r\n\t\tthrow new Error(\"Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.\");\r\n\t}\r\n}\r\n\r\nfunction removeStyleElement(styleElement) {\r\n\tstyleElement.parentNode.removeChild(styleElement);\r\n\tvar idx = styleElementsInsertedAtTop.indexOf(styleElement);\r\n\tif(idx >= 0) {\r\n\t\tstyleElementsInsertedAtTop.splice(idx, 1);\r\n\t}\r\n}\r\n\r\nfunction createStyleElement(options) {\r\n\tvar styleElement = document.createElement(\"style\");\r\n\tstyleElement.type = \"text/css\";\r\n\tinsertStyleElement(options, styleElement);\r\n\treturn styleElement;\r\n}\r\n\r\nfunction createLinkElement(options) {\r\n\tvar linkElement = document.createElement(\"link\");\r\n\tlinkElement.rel = \"stylesheet\";\r\n\tinsertStyleElement(options, linkElement);\r\n\treturn linkElement;\r\n}\r\n\r\nfunction addStyle(obj, options) {\r\n\tvar styleElement, update, remove;\r\n\r\n\tif (options.singleton) {\r\n\t\tvar styleIndex = singletonCounter++;\r\n\t\tstyleElement = singletonElement || (singletonElement = createStyleElement(options));\r\n\t\tupdate = applyToSingletonTag.bind(null, styleElement, styleIndex, false);\r\n\t\tremove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);\r\n\t} else if(obj.sourceMap &&\r\n\t\ttypeof URL === \"function\" &&\r\n\t\ttypeof URL.createObjectURL === \"function\" &&\r\n\t\ttypeof URL.revokeObjectURL === \"function\" &&\r\n\t\ttypeof Blob === \"function\" &&\r\n\t\ttypeof btoa === \"function\") {\r\n\t\tstyleElement = createLinkElement(options);\r\n\t\tupdate = updateLink.bind(null, styleElement);\r\n\t\tremove = function() {\r\n\t\t\tremoveStyleElement(styleElement);\r\n\t\t\tif(styleElement.href)\r\n\t\t\t\tURL.revokeObjectURL(styleElement.href);\r\n\t\t};\r\n\t} else {\r\n\t\tstyleElement = createStyleElement(options);\r\n\t\tupdate = applyToTag.bind(null, styleElement);\r\n\t\tremove = function() {\r\n\t\t\tremoveStyleElement(styleElement);\r\n\t\t};\r\n\t}\r\n\r\n\tupdate(obj);\r\n\r\n\treturn function updateStyle(newObj) {\r\n\t\tif(newObj) {\r\n\t\t\tif(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)\r\n\t\t\t\treturn;\r\n\t\t\tupdate(obj = newObj);\r\n\t\t} else {\r\n\t\t\tremove();\r\n\t\t}\r\n\t};\r\n}\r\n\r\nvar replaceText = (function () {\r\n\tvar textStore = [];\r\n\r\n\treturn function (index, replacement) {\r\n\t\ttextStore[index] = replacement;\r\n\t\treturn textStore.filter(Boolean).join('\\n');\r\n\t};\r\n})();\r\n\r\nfunction applyToSingletonTag(styleElement, index, remove, obj) {\r\n\tvar css = remove ? \"\" : obj.css;\r\n\r\n\tif (styleElement.styleSheet) {\r\n\t\tstyleElement.styleSheet.cssText = replaceText(index, css);\r\n\t} else {\r\n\t\tvar cssNode = document.createTextNode(css);\r\n\t\tvar childNodes = styleElement.childNodes;\r\n\t\tif (childNodes[index]) styleElement.removeChild(childNodes[index]);\r\n\t\tif (childNodes.length) {\r\n\t\t\tstyleElement.insertBefore(cssNode, childNodes[index]);\r\n\t\t} else {\r\n\t\t\tstyleElement.appendChild(cssNode);\r\n\t\t}\r\n\t}\r\n}\r\n\r\nfunction applyToTag(styleElement, obj) {\r\n\tvar css = obj.css;\r\n\tvar media = obj.media;\r\n\tvar sourceMap = obj.sourceMap;\r\n\r\n\tif(media) {\r\n\t\tstyleElement.setAttribute(\"media\", media)\r\n\t}\r\n\r\n\tif(styleElement.styleSheet) {\r\n\t\tstyleElement.styleSheet.cssText = css;\r\n\t} else {\r\n\t\twhile(styleElement.firstChild) {\r\n\t\t\tstyleElement.removeChild(styleElement.firstChild);\r\n\t\t}\r\n\t\tstyleElement.appendChild(document.createTextNode(css));\r\n\t}\r\n}\r\n\r\nfunction updateLink(linkElement, obj) {\r\n\tvar css = obj.css;\r\n\tvar media = obj.media;\r\n\tvar sourceMap = obj.sourceMap;\r\n\r\n\tif(sourceMap) {\r\n\t\t// http://stackoverflow.com/a/26603875\r\n\t\tcss += \"\\n/*# sourceMappingURL=data:application/json;base64,\" + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + \" */\";\r\n\t}\r\n\r\n\tvar blob = new Blob([css], { type: \"text/css\" });\r\n\r\n\tvar oldSrc = linkElement.href;\r\n\r\n\tlinkElement.href = URL.createObjectURL(blob);\r\n\r\n\tif(oldSrc)\r\n\t\tURL.revokeObjectURL(oldSrc);\r\n}\r\n"
+        },
+        {
+          "id": 8,
+          "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/jade-loader/index.js!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.jade",
+          "name": "./menu/menu.jade",
+          "index": 8,
+          "index2": 8,
+          "size": 1405,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/menu/index.js",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/menu/index.js",
+              "module": "./menu/index.js",
+              "moduleName": "./menu/index.js",
+              "type": "cjs require",
+              "userRequest": "./menu.jade",
+              "loc": "9:12-34"
+            }
+          ],
+          "source": "var jade = require(\"/Users/learn/webpack-screencast/code/project/node_modules/jade/lib/runtime.js\");\n\nmodule.exports = function template(locals) {\nvar buf = [];\nvar jade_mixins = {};\nvar jade_interp;\n;var locals_for_with = (locals || {});(function (items, title, undefined) {\nbuf.push(\"<span class=\\\"title\\\">\" + (jade.escape(null == (jade_interp = title) ? \"\" : jade_interp)) + \"</span><ul class=\\\"list\\\">\");\n// iterate items\n;(function(){\n  var $$obj = items;\n  if ('number' == typeof $$obj.length) {\n\n    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {\n      var item = $$obj[$index];\n\nbuf.push(\"<li><a\" + (jade.attr(\"href\", item.href, true, false)) + \">\" + (jade.escape(null == (jade_interp = item.text) ? \"\" : jade_interp)) + \"</a></li>\");\n    }\n\n  } else {\n    var $$l = 0;\n    for (var $index in $$obj) {\n      $$l++;      var item = $$obj[$index];\n\nbuf.push(\"<li><a\" + (jade.attr(\"href\", item.href, true, false)) + \">\" + (jade.escape(null == (jade_interp = item.text) ? \"\" : jade_interp)) + \"</a></li>\");\n    }\n\n  }\n}).call(this);\n\nbuf.push(\"</ul>\");}.call(this,\"items\" in locals_for_with?locals_for_with.items:typeof items!==\"undefined\"?items:undefined,\"title\" in locals_for_with?locals_for_with.title:typeof title!==\"undefined\"?title:undefined,\"undefined\" in locals_for_with?locals_for_with.undefined:typeof undefined!==\"undefined\"?undefined:undefined));;return buf.join(\"\");\n}"
+        },
+        {
+          "id": 9,
+          "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/jade/lib/runtime.js",
+          "name": "../~/jade/lib/runtime.js",
+          "index": 9,
+          "index2": 7,
+          "size": 5667,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/jade-loader/index.js!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.jade",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 8,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/jade-loader/index.js!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.jade",
+              "module": "./menu/menu.jade",
+              "moduleName": "./menu/menu.jade",
+              "type": "cjs require",
+              "userRequest": "/Users/learn/webpack-screencast/code/project/node_modules/jade/lib/runtime.js",
+              "loc": "1:11-99"
+            }
+          ],
+          "source": "'use strict';\n\n/**\n * Merge two attribute objects giving precedence\n * to values in object `b`. Classes are special-cased\n * allowing for arrays and merging/joining appropriately\n * resulting in a string.\n *\n * @param {Object} a\n * @param {Object} b\n * @return {Object} a\n * @api private\n */\n\nexports.merge = function merge(a, b) {\n  if (arguments.length === 1) {\n    var attrs = a[0];\n    for (var i = 1; i < a.length; i++) {\n      attrs = merge(attrs, a[i]);\n    }\n    return attrs;\n  }\n  var ac = a['class'];\n  var bc = b['class'];\n\n  if (ac || bc) {\n    ac = ac || [];\n    bc = bc || [];\n    if (!Array.isArray(ac)) ac = [ac];\n    if (!Array.isArray(bc)) bc = [bc];\n    a['class'] = ac.concat(bc).filter(nulls);\n  }\n\n  for (var key in b) {\n    if (key != 'class') {\n      a[key] = b[key];\n    }\n  }\n\n  return a;\n};\n\n/**\n * Filter null `val`s.\n *\n * @param {*} val\n * @return {Boolean}\n * @api private\n */\n\nfunction nulls(val) {\n  return val != null && val !== '';\n}\n\n/**\n * join array as classes.\n *\n * @param {*} val\n * @return {String}\n */\nexports.joinClasses = joinClasses;\nfunction joinClasses(val) {\n  return (Array.isArray(val) ? val.map(joinClasses) :\n    (val && typeof val === 'object') ? Object.keys(val).filter(function (key) { return val[key]; }) :\n    [val]).filter(nulls).join(' ');\n}\n\n/**\n * Render the given classes.\n *\n * @param {Array} classes\n * @param {Array.<Boolean>} escaped\n * @return {String}\n */\nexports.cls = function cls(classes, escaped) {\n  var buf = [];\n  for (var i = 0; i < classes.length; i++) {\n    if (escaped && escaped[i]) {\n      buf.push(exports.escape(joinClasses([classes[i]])));\n    } else {\n      buf.push(joinClasses(classes[i]));\n    }\n  }\n  var text = joinClasses(buf);\n  if (text.length) {\n    return ' class=\"' + text + '\"';\n  } else {\n    return '';\n  }\n};\n\n\nexports.style = function (val) {\n  if (val && typeof val === 'object') {\n    return Object.keys(val).map(function (style) {\n      return style + ':' + val[style];\n    }).join(';');\n  } else {\n    return val;\n  }\n};\n/**\n * Render the given attribute.\n *\n * @param {String} key\n * @param {String} val\n * @param {Boolean} escaped\n * @param {Boolean} terse\n * @return {String}\n */\nexports.attr = function attr(key, val, escaped, terse) {\n  if (key === 'style') {\n    val = exports.style(val);\n  }\n  if ('boolean' == typeof val || null == val) {\n    if (val) {\n      return ' ' + (terse ? key : key + '=\"' + key + '\"');\n    } else {\n      return '';\n    }\n  } else if (0 == key.indexOf('data') && 'string' != typeof val) {\n    if (JSON.stringify(val).indexOf('&') !== -1) {\n      console.warn('Since Jade 2.0.0, ampersands (`&`) in data attributes ' +\n                   'will be escaped to `&amp;`');\n    };\n    if (val && typeof val.toISOString === 'function') {\n      console.warn('Jade will eliminate the double quotes around dates in ' +\n                   'ISO form after 2.0.0');\n    }\n    return ' ' + key + \"='\" + JSON.stringify(val).replace(/'/g, '&apos;') + \"'\";\n  } else if (escaped) {\n    if (val && typeof val.toISOString === 'function') {\n      console.warn('Jade will stringify dates in ISO form after 2.0.0');\n    }\n    return ' ' + key + '=\"' + exports.escape(val) + '\"';\n  } else {\n    if (val && typeof val.toISOString === 'function') {\n      console.warn('Jade will stringify dates in ISO form after 2.0.0');\n    }\n    return ' ' + key + '=\"' + val + '\"';\n  }\n};\n\n/**\n * Render the given attributes object.\n *\n * @param {Object} obj\n * @param {Object} escaped\n * @return {String}\n */\nexports.attrs = function attrs(obj, terse){\n  var buf = [];\n\n  var keys = Object.keys(obj);\n\n  if (keys.length) {\n    for (var i = 0; i < keys.length; ++i) {\n      var key = keys[i]\n        , val = obj[key];\n\n      if ('class' == key) {\n        if (val = joinClasses(val)) {\n          buf.push(' ' + key + '=\"' + val + '\"');\n        }\n      } else {\n        buf.push(exports.attr(key, val, false, terse));\n      }\n    }\n  }\n\n  return buf.join('');\n};\n\n/**\n * Escape the given string of `html`.\n *\n * @param {String} html\n * @return {String}\n * @api private\n */\n\nvar jade_encode_html_rules = {\n  '&': '&amp;',\n  '<': '&lt;',\n  '>': '&gt;',\n  '\"': '&quot;'\n};\nvar jade_match_html = /[&<>\"]/g;\n\nfunction jade_encode_char(c) {\n  return jade_encode_html_rules[c] || c;\n}\n\nexports.escape = jade_escape;\nfunction jade_escape(html){\n  var result = String(html).replace(jade_match_html, jade_encode_char);\n  if (result === '' + html) return html;\n  else return result;\n};\n\n/**\n * Re-throw the given `err` in context to the\n * the jade in `filename` at the given `lineno`.\n *\n * @param {Error} err\n * @param {String} filename\n * @param {String} lineno\n * @api private\n */\n\nexports.rethrow = function rethrow(err, filename, lineno, str){\n  if (!(err instanceof Error)) throw err;\n  if ((typeof window != 'undefined' || !filename) && !str) {\n    err.message += ' on line ' + lineno;\n    throw err;\n  }\n  try {\n    str = str || require('fs').readFileSync(filename, 'utf8')\n  } catch (ex) {\n    rethrow(err, null, lineno)\n  }\n  var context = 3\n    , lines = str.split('\\n')\n    , start = Math.max(lineno - context, 0)\n    , end = Math.min(lines.length, lineno + context);\n\n  // Error context\n  var context = lines.slice(start, end).map(function(line, i){\n    var curr = i + start + 1;\n    return (curr == lineno ? '  > ' : '    ')\n      + curr\n      + '| '\n      + line;\n  }).join('\\n');\n\n  // Alter exception message\n  err.path = filename;\n  err.message = (filename || 'Jade') + ':' + lineno\n    + '\\n' + context + '\\n\\n' + err.message;\n  throw err;\n};\n\nexports.DebugItem = function DebugItem(lineno, filename) {\n  this.lineno = lineno;\n  this.filename = filename;\n}\n"
+        },
+        {
+          "id": 10,
+          "identifier": "ignored /Users/learn/webpack-screencast/code/project/node_modules/jade/lib fs",
+          "name": "fs (ignored)",
+          "index": 10,
+          "index2": 6,
+          "size": 15,
+          "cacheable": true,
+          "built": false,
+          "optional": true,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/jade/lib/runtime.js",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 9,
+              "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/jade/lib/runtime.js",
+              "module": "../~/jade/lib/runtime.js",
+              "moduleName": "../~/jade/lib/runtime.js",
+              "type": "cjs require",
+              "userRequest": "fs",
+              "loc": "218:17-30"
+            }
+          ]
+        }
+      ],
+      "filteredModules": 0,
+      "loc": "3:0-21:2",
+      "origins": [
+        {
+          "moduleId": 0,
+          "module": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/main.js",
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/main.js",
+          "moduleName": "./main.js",
+          "loc": "3:0-21:2",
+          "name": null,
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/main.js",
+      "name": "./main.js",
+      "index": 0,
+      "index2": 10,
+      "size": 379,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [],
+      "source": "'use strict';\n\nrequire.ensure([], function (require) {\n\n  var Menu = require('./menu').default;\n  var pandaMenu = new Menu({\n    title: \"Меню панды\",\n    items: [{\n      text: 'Яйца',\n      href: '#eggs'\n    }, {\n      text: 'Мясо',\n      href: '#meat'\n    }, {\n      text: '99% еды - бамбук!',\n      href: '#bamboo'\n    }]\n  });\n\n  document.body.appendChild(pandaMenu.elem);\n});"
+    },
+    {
+      "id": 1,
+      "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/menu/index.js",
+      "name": "./menu/index.js",
+      "index": 1,
+      "index2": 9,
+      "size": 907,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/main.js",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 0,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/main.js",
+          "module": "./main.js",
+          "moduleName": "./main.js",
+          "type": "cjs require",
+          "userRequest": "./menu",
+          "loc": "5:13-30"
+        }
+      ],
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nrequire('./menu.styl');\n\nvar _menu = require('./menu.jade');\n\nvar _menu2 = _interopRequireDefault(_menu);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Menu = function Menu(options) {\n  var _this = this;\n\n  _classCallCheck(this, Menu);\n\n  this.elem = document.createElement('div');\n  this.elem.className = 'menu';\n\n  this.elem.innerHTML = (0, _menu2.default)(options);\n\n  this.titleElem = this.elem.querySelector('.title');\n\n  this.titleElem.onclick = function () {\n    return _this.elem.classList.toggle('open');\n  };\n\n  this.titleElem.onmousedown = function () {\n    return false;\n  };\n};\n\nexports.default = Menu;"
+    },
+    {
+      "id": 2,
+      "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/style-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+      "name": "./menu/menu.styl",
+      "index": 2,
+      "index2": 5,
+      "size": 1087,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/menu/index.js",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 1,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/menu/index.js",
+          "module": "./menu/index.js",
+          "moduleName": "./menu/index.js",
+          "type": "cjs require",
+          "userRequest": "./menu.styl",
+          "loc": "7:0-22"
+        }
+      ],
+      "source": "// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// load the styles\nvar content = require(\"!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js?resolve url!./menu.styl\");\nif(typeof content === 'string') content = [[module.id, content, '']];\n// add the styles to the DOM\nvar update = require(\"!./../../node_modules/style-loader/addStyles.js\")(content, {});\nif(content.locals) module.exports = content.locals;\n// Hot Module Replacement\nif(module.hot) {\n\t// When the styles change, update the <style> tags\n\tif(!content.locals) {\n\t\tmodule.hot.accept(\"!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js?resolve url!./menu.styl\", function() {\n\t\t\tvar newContent = require(\"!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js?resolve url!./menu.styl\");\n\t\t\tif(typeof newContent === 'string') newContent = [[module.id, newContent, '']];\n\t\t\tupdate(newContent);\n\t\t});\n\t}\n\t// When the module is disposed, remove the <style> tags\n\tmodule.hot.dispose(function() { update(); });\n}"
+    },
+    {
+      "id": 3,
+      "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+      "name": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+      "index": 3,
+      "index2": 3,
+      "size": 606,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/style-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 2,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/style-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+          "module": "./menu/menu.styl",
+          "moduleName": "./menu/menu.styl",
+          "type": "cjs require",
+          "userRequest": "!!./../../node_modules/css-loader/index.js!./../../node_modules/stylus-loader/index.js?resolve url!./menu.styl",
+          "loc": "4:14-135"
+        }
+      ],
+      "source": "exports = module.exports = require(\"./../../node_modules/css-loader/lib/css-base.js\")();\n// imports\n\n\n// module\nexports.push([module.id, \".menu .title {\\n  background-image: url(\" + require(\"./plus.svg\") + \");\\n  padding: 0 6px 0 16px;\\n  background-position: left 1px;\\n  background-repeat: no-repeat;\\n  background-size: 14px;\\n  font-weight: bold;\\n  cursor: pointer;\\n}\\n.menu .list {\\n  display: none;\\n  margin: 0;\\n}\\n.menu .list a {\\n  color: #00f;\\n}\\n.menu.open .list {\\n  display: block;\\n}\\n.menu.open .title {\\n  background-image: url(\" + require(\"./minus.svg\") + \");\\n}\\n\", \"\"]);\n\n// exports\n"
+    },
+    {
+      "id": 4,
+      "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/lib/css-base.js",
+      "name": "../~/css-loader/lib/css-base.js",
+      "index": 4,
+      "index2": 0,
+      "size": 1506,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+          "module": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+          "moduleName": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+          "type": "cjs require",
+          "userRequest": "./../../node_modules/css-loader/lib/css-base.js",
+          "loc": "1:27-85"
+        }
+      ],
+      "source": "/*\r\n\tMIT License http://www.opensource.org/licenses/mit-license.php\r\n\tAuthor Tobias Koppers @sokra\r\n*/\r\n// css base code, injected by the css-loader\r\nmodule.exports = function() {\r\n\tvar list = [];\r\n\r\n\t// return the list of modules as css string\r\n\tlist.toString = function toString() {\r\n\t\tvar result = [];\r\n\t\tfor(var i = 0; i < this.length; i++) {\r\n\t\t\tvar item = this[i];\r\n\t\t\tif(item[2]) {\r\n\t\t\t\tresult.push(\"@media \" + item[2] + \"{\" + item[1] + \"}\");\r\n\t\t\t} else {\r\n\t\t\t\tresult.push(item[1]);\r\n\t\t\t}\r\n\t\t}\r\n\t\treturn result.join(\"\");\r\n\t};\r\n\r\n\t// import a list of modules into the list\r\n\tlist.i = function(modules, mediaQuery) {\r\n\t\tif(typeof modules === \"string\")\r\n\t\t\tmodules = [[null, modules, \"\"]];\r\n\t\tvar alreadyImportedModules = {};\r\n\t\tfor(var i = 0; i < this.length; i++) {\r\n\t\t\tvar id = this[i][0];\r\n\t\t\tif(typeof id === \"number\")\r\n\t\t\t\talreadyImportedModules[id] = true;\r\n\t\t}\r\n\t\tfor(i = 0; i < modules.length; i++) {\r\n\t\t\tvar item = modules[i];\r\n\t\t\t// skip already imported module\r\n\t\t\t// this implementation is not 100% perfect for weird media query combinations\r\n\t\t\t//  when a module is imported multiple times with different media queries.\r\n\t\t\t//  I hope this will never occur (Hey this way we have smaller bundles)\r\n\t\t\tif(typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\r\n\t\t\t\tif(mediaQuery && !item[2]) {\r\n\t\t\t\t\titem[2] = mediaQuery;\r\n\t\t\t\t} else if(mediaQuery) {\r\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\r\n\t\t\t\t}\r\n\t\t\t\tlist.push(item);\r\n\t\t\t}\r\n\t\t}\r\n\t};\r\n\treturn list;\r\n};\r\n"
+    },
+    {
+      "id": 5,
+      "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/file-loader/index.js?name=[name].[ext]?[hash]!/Users/learn/webpack-screencast/code/project/frontend/menu/plus.svg",
+      "name": "./menu/plus.svg",
+      "index": 5,
+      "index2": 1,
+      "size": 86,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [
+        "plus.svg?2a95646906435fee9421ab7e89c7be68"
+      ],
+      "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+          "module": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+          "moduleName": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+          "type": "cjs require",
+          "userRequest": "./plus.svg",
+          "loc": "6:70-91"
+        }
+      ],
+      "source": "module.exports = __webpack_public_path__ + \"plus.svg?2a95646906435fee9421ab7e89c7be68\""
+    },
+    {
+      "id": 6,
+      "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/file-loader/index.js?name=[name].[ext]?[hash]!/Users/learn/webpack-screencast/code/project/frontend/menu/minus.svg",
+      "name": "./menu/minus.svg",
+      "index": 6,
+      "index2": 2,
+      "size": 87,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [
+        "minus.svg?2dc8d1e0568e4f4e31a9caf42c2b4b14"
+      ],
+      "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+          "module": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+          "moduleName": "../~/css-loader!../~/stylus-loader?resolve url!./menu/menu.styl",
+          "type": "cjs require",
+          "userRequest": "./minus.svg",
+          "loc": "6:440-462"
+        }
+      ],
+      "source": "module.exports = __webpack_public_path__ + \"minus.svg?2dc8d1e0568e4f4e31a9caf42c2b4b14\""
+    },
+    {
+      "id": 7,
+      "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/style-loader/addStyles.js",
+      "name": "../~/style-loader/addStyles.js",
+      "index": 7,
+      "index2": 4,
+      "size": 7212,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/style-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 2,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/style-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/css-loader/index.js!/Users/learn/webpack-screencast/code/project/node_modules/stylus-loader/index.js?resolve url!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.styl",
+          "module": "./menu/menu.styl",
+          "moduleName": "./menu/menu.styl",
+          "type": "cjs require",
+          "userRequest": "!./../../node_modules/style-loader/addStyles.js",
+          "loc": "7:13-71"
+        }
+      ],
+      "source": "/*\r\n\tMIT License http://www.opensource.org/licenses/mit-license.php\r\n\tAuthor Tobias Koppers @sokra\r\n*/\r\nvar stylesInDom = {},\r\n\tmemoize = function(fn) {\r\n\t\tvar memo;\r\n\t\treturn function () {\r\n\t\t\tif (typeof memo === \"undefined\") memo = fn.apply(this, arguments);\r\n\t\t\treturn memo;\r\n\t\t};\r\n\t},\r\n\tisOldIE = memoize(function() {\r\n\t\treturn /msie [6-9]\\b/.test(window.navigator.userAgent.toLowerCase());\r\n\t}),\r\n\tgetHeadElement = memoize(function () {\r\n\t\treturn document.head || document.getElementsByTagName(\"head\")[0];\r\n\t}),\r\n\tsingletonElement = null,\r\n\tsingletonCounter = 0,\r\n\tstyleElementsInsertedAtTop = [];\r\n\r\nmodule.exports = function(list, options) {\r\n\tif(typeof DEBUG !== \"undefined\" && DEBUG) {\r\n\t\tif(typeof document !== \"object\") throw new Error(\"The style-loader cannot be used in a non-browser environment\");\r\n\t}\r\n\r\n\toptions = options || {};\r\n\t// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>\r\n\t// tags it will allow on a page\r\n\tif (typeof options.singleton === \"undefined\") options.singleton = isOldIE();\r\n\r\n\t// By default, add <style> tags to the bottom of <head>.\r\n\tif (typeof options.insertAt === \"undefined\") options.insertAt = \"bottom\";\r\n\r\n\tvar styles = listToStyles(list);\r\n\taddStylesToDom(styles, options);\r\n\r\n\treturn function update(newList) {\r\n\t\tvar mayRemove = [];\r\n\t\tfor(var i = 0; i < styles.length; i++) {\r\n\t\t\tvar item = styles[i];\r\n\t\t\tvar domStyle = stylesInDom[item.id];\r\n\t\t\tdomStyle.refs--;\r\n\t\t\tmayRemove.push(domStyle);\r\n\t\t}\r\n\t\tif(newList) {\r\n\t\t\tvar newStyles = listToStyles(newList);\r\n\t\t\taddStylesToDom(newStyles, options);\r\n\t\t}\r\n\t\tfor(var i = 0; i < mayRemove.length; i++) {\r\n\t\t\tvar domStyle = mayRemove[i];\r\n\t\t\tif(domStyle.refs === 0) {\r\n\t\t\t\tfor(var j = 0; j < domStyle.parts.length; j++)\r\n\t\t\t\t\tdomStyle.parts[j]();\r\n\t\t\t\tdelete stylesInDom[domStyle.id];\r\n\t\t\t}\r\n\t\t}\r\n\t};\r\n}\r\n\r\nfunction addStylesToDom(styles, options) {\r\n\tfor(var i = 0; i < styles.length; i++) {\r\n\t\tvar item = styles[i];\r\n\t\tvar domStyle = stylesInDom[item.id];\r\n\t\tif(domStyle) {\r\n\t\t\tdomStyle.refs++;\r\n\t\t\tfor(var j = 0; j < domStyle.parts.length; j++) {\r\n\t\t\t\tdomStyle.parts[j](item.parts[j]);\r\n\t\t\t}\r\n\t\t\tfor(; j < item.parts.length; j++) {\r\n\t\t\t\tdomStyle.parts.push(addStyle(item.parts[j], options));\r\n\t\t\t}\r\n\t\t} else {\r\n\t\t\tvar parts = [];\r\n\t\t\tfor(var j = 0; j < item.parts.length; j++) {\r\n\t\t\t\tparts.push(addStyle(item.parts[j], options));\r\n\t\t\t}\r\n\t\t\tstylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};\r\n\t\t}\r\n\t}\r\n}\r\n\r\nfunction listToStyles(list) {\r\n\tvar styles = [];\r\n\tvar newStyles = {};\r\n\tfor(var i = 0; i < list.length; i++) {\r\n\t\tvar item = list[i];\r\n\t\tvar id = item[0];\r\n\t\tvar css = item[1];\r\n\t\tvar media = item[2];\r\n\t\tvar sourceMap = item[3];\r\n\t\tvar part = {css: css, media: media, sourceMap: sourceMap};\r\n\t\tif(!newStyles[id])\r\n\t\t\tstyles.push(newStyles[id] = {id: id, parts: [part]});\r\n\t\telse\r\n\t\t\tnewStyles[id].parts.push(part);\r\n\t}\r\n\treturn styles;\r\n}\r\n\r\nfunction insertStyleElement(options, styleElement) {\r\n\tvar head = getHeadElement();\r\n\tvar lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];\r\n\tif (options.insertAt === \"top\") {\r\n\t\tif(!lastStyleElementInsertedAtTop) {\r\n\t\t\thead.insertBefore(styleElement, head.firstChild);\r\n\t\t} else if(lastStyleElementInsertedAtTop.nextSibling) {\r\n\t\t\thead.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);\r\n\t\t} else {\r\n\t\t\thead.appendChild(styleElement);\r\n\t\t}\r\n\t\tstyleElementsInsertedAtTop.push(styleElement);\r\n\t} else if (options.insertAt === \"bottom\") {\r\n\t\thead.appendChild(styleElement);\r\n\t} else {\r\n\t\tthrow new Error(\"Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.\");\r\n\t}\r\n}\r\n\r\nfunction removeStyleElement(styleElement) {\r\n\tstyleElement.parentNode.removeChild(styleElement);\r\n\tvar idx = styleElementsInsertedAtTop.indexOf(styleElement);\r\n\tif(idx >= 0) {\r\n\t\tstyleElementsInsertedAtTop.splice(idx, 1);\r\n\t}\r\n}\r\n\r\nfunction createStyleElement(options) {\r\n\tvar styleElement = document.createElement(\"style\");\r\n\tstyleElement.type = \"text/css\";\r\n\tinsertStyleElement(options, styleElement);\r\n\treturn styleElement;\r\n}\r\n\r\nfunction createLinkElement(options) {\r\n\tvar linkElement = document.createElement(\"link\");\r\n\tlinkElement.rel = \"stylesheet\";\r\n\tinsertStyleElement(options, linkElement);\r\n\treturn linkElement;\r\n}\r\n\r\nfunction addStyle(obj, options) {\r\n\tvar styleElement, update, remove;\r\n\r\n\tif (options.singleton) {\r\n\t\tvar styleIndex = singletonCounter++;\r\n\t\tstyleElement = singletonElement || (singletonElement = createStyleElement(options));\r\n\t\tupdate = applyToSingletonTag.bind(null, styleElement, styleIndex, false);\r\n\t\tremove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);\r\n\t} else if(obj.sourceMap &&\r\n\t\ttypeof URL === \"function\" &&\r\n\t\ttypeof URL.createObjectURL === \"function\" &&\r\n\t\ttypeof URL.revokeObjectURL === \"function\" &&\r\n\t\ttypeof Blob === \"function\" &&\r\n\t\ttypeof btoa === \"function\") {\r\n\t\tstyleElement = createLinkElement(options);\r\n\t\tupdate = updateLink.bind(null, styleElement);\r\n\t\tremove = function() {\r\n\t\t\tremoveStyleElement(styleElement);\r\n\t\t\tif(styleElement.href)\r\n\t\t\t\tURL.revokeObjectURL(styleElement.href);\r\n\t\t};\r\n\t} else {\r\n\t\tstyleElement = createStyleElement(options);\r\n\t\tupdate = applyToTag.bind(null, styleElement);\r\n\t\tremove = function() {\r\n\t\t\tremoveStyleElement(styleElement);\r\n\t\t};\r\n\t}\r\n\r\n\tupdate(obj);\r\n\r\n\treturn function updateStyle(newObj) {\r\n\t\tif(newObj) {\r\n\t\t\tif(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)\r\n\t\t\t\treturn;\r\n\t\t\tupdate(obj = newObj);\r\n\t\t} else {\r\n\t\t\tremove();\r\n\t\t}\r\n\t};\r\n}\r\n\r\nvar replaceText = (function () {\r\n\tvar textStore = [];\r\n\r\n\treturn function (index, replacement) {\r\n\t\ttextStore[index] = replacement;\r\n\t\treturn textStore.filter(Boolean).join('\\n');\r\n\t};\r\n})();\r\n\r\nfunction applyToSingletonTag(styleElement, index, remove, obj) {\r\n\tvar css = remove ? \"\" : obj.css;\r\n\r\n\tif (styleElement.styleSheet) {\r\n\t\tstyleElement.styleSheet.cssText = replaceText(index, css);\r\n\t} else {\r\n\t\tvar cssNode = document.createTextNode(css);\r\n\t\tvar childNodes = styleElement.childNodes;\r\n\t\tif (childNodes[index]) styleElement.removeChild(childNodes[index]);\r\n\t\tif (childNodes.length) {\r\n\t\t\tstyleElement.insertBefore(cssNode, childNodes[index]);\r\n\t\t} else {\r\n\t\t\tstyleElement.appendChild(cssNode);\r\n\t\t}\r\n\t}\r\n}\r\n\r\nfunction applyToTag(styleElement, obj) {\r\n\tvar css = obj.css;\r\n\tvar media = obj.media;\r\n\tvar sourceMap = obj.sourceMap;\r\n\r\n\tif(media) {\r\n\t\tstyleElement.setAttribute(\"media\", media)\r\n\t}\r\n\r\n\tif(styleElement.styleSheet) {\r\n\t\tstyleElement.styleSheet.cssText = css;\r\n\t} else {\r\n\t\twhile(styleElement.firstChild) {\r\n\t\t\tstyleElement.removeChild(styleElement.firstChild);\r\n\t\t}\r\n\t\tstyleElement.appendChild(document.createTextNode(css));\r\n\t}\r\n}\r\n\r\nfunction updateLink(linkElement, obj) {\r\n\tvar css = obj.css;\r\n\tvar media = obj.media;\r\n\tvar sourceMap = obj.sourceMap;\r\n\r\n\tif(sourceMap) {\r\n\t\t// http://stackoverflow.com/a/26603875\r\n\t\tcss += \"\\n/*# sourceMappingURL=data:application/json;base64,\" + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + \" */\";\r\n\t}\r\n\r\n\tvar blob = new Blob([css], { type: \"text/css\" });\r\n\r\n\tvar oldSrc = linkElement.href;\r\n\r\n\tlinkElement.href = URL.createObjectURL(blob);\r\n\r\n\tif(oldSrc)\r\n\t\tURL.revokeObjectURL(oldSrc);\r\n}\r\n"
+    },
+    {
+      "id": 8,
+      "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/jade-loader/index.js!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.jade",
+      "name": "./menu/menu.jade",
+      "index": 8,
+      "index2": 8,
+      "size": 1405,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/menu/index.js",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 1,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/babel-loader/index.js?presets[]=es2015!/Users/learn/webpack-screencast/code/project/frontend/menu/index.js",
+          "module": "./menu/index.js",
+          "moduleName": "./menu/index.js",
+          "type": "cjs require",
+          "userRequest": "./menu.jade",
+          "loc": "9:12-34"
+        }
+      ],
+      "source": "var jade = require(\"/Users/learn/webpack-screencast/code/project/node_modules/jade/lib/runtime.js\");\n\nmodule.exports = function template(locals) {\nvar buf = [];\nvar jade_mixins = {};\nvar jade_interp;\n;var locals_for_with = (locals || {});(function (items, title, undefined) {\nbuf.push(\"<span class=\\\"title\\\">\" + (jade.escape(null == (jade_interp = title) ? \"\" : jade_interp)) + \"</span><ul class=\\\"list\\\">\");\n// iterate items\n;(function(){\n  var $$obj = items;\n  if ('number' == typeof $$obj.length) {\n\n    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {\n      var item = $$obj[$index];\n\nbuf.push(\"<li><a\" + (jade.attr(\"href\", item.href, true, false)) + \">\" + (jade.escape(null == (jade_interp = item.text) ? \"\" : jade_interp)) + \"</a></li>\");\n    }\n\n  } else {\n    var $$l = 0;\n    for (var $index in $$obj) {\n      $$l++;      var item = $$obj[$index];\n\nbuf.push(\"<li><a\" + (jade.attr(\"href\", item.href, true, false)) + \">\" + (jade.escape(null == (jade_interp = item.text) ? \"\" : jade_interp)) + \"</a></li>\");\n    }\n\n  }\n}).call(this);\n\nbuf.push(\"</ul>\");}.call(this,\"items\" in locals_for_with?locals_for_with.items:typeof items!==\"undefined\"?items:undefined,\"title\" in locals_for_with?locals_for_with.title:typeof title!==\"undefined\"?title:undefined,\"undefined\" in locals_for_with?locals_for_with.undefined:typeof undefined!==\"undefined\"?undefined:undefined));;return buf.join(\"\");\n}"
+    },
+    {
+      "id": 9,
+      "identifier": "/Users/learn/webpack-screencast/code/project/node_modules/jade/lib/runtime.js",
+      "name": "../~/jade/lib/runtime.js",
+      "index": 9,
+      "index2": 7,
+      "size": 5667,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/jade-loader/index.js!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.jade",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 8,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/jade-loader/index.js!/Users/learn/webpack-screencast/code/project/frontend/menu/menu.jade",
+          "module": "./menu/menu.jade",
+          "moduleName": "./menu/menu.jade",
+          "type": "cjs require",
+          "userRequest": "/Users/learn/webpack-screencast/code/project/node_modules/jade/lib/runtime.js",
+          "loc": "1:11-99"
+        }
+      ],
+      "source": "'use strict';\n\n/**\n * Merge two attribute objects giving precedence\n * to values in object `b`. Classes are special-cased\n * allowing for arrays and merging/joining appropriately\n * resulting in a string.\n *\n * @param {Object} a\n * @param {Object} b\n * @return {Object} a\n * @api private\n */\n\nexports.merge = function merge(a, b) {\n  if (arguments.length === 1) {\n    var attrs = a[0];\n    for (var i = 1; i < a.length; i++) {\n      attrs = merge(attrs, a[i]);\n    }\n    return attrs;\n  }\n  var ac = a['class'];\n  var bc = b['class'];\n\n  if (ac || bc) {\n    ac = ac || [];\n    bc = bc || [];\n    if (!Array.isArray(ac)) ac = [ac];\n    if (!Array.isArray(bc)) bc = [bc];\n    a['class'] = ac.concat(bc).filter(nulls);\n  }\n\n  for (var key in b) {\n    if (key != 'class') {\n      a[key] = b[key];\n    }\n  }\n\n  return a;\n};\n\n/**\n * Filter null `val`s.\n *\n * @param {*} val\n * @return {Boolean}\n * @api private\n */\n\nfunction nulls(val) {\n  return val != null && val !== '';\n}\n\n/**\n * join array as classes.\n *\n * @param {*} val\n * @return {String}\n */\nexports.joinClasses = joinClasses;\nfunction joinClasses(val) {\n  return (Array.isArray(val) ? val.map(joinClasses) :\n    (val && typeof val === 'object') ? Object.keys(val).filter(function (key) { return val[key]; }) :\n    [val]).filter(nulls).join(' ');\n}\n\n/**\n * Render the given classes.\n *\n * @param {Array} classes\n * @param {Array.<Boolean>} escaped\n * @return {String}\n */\nexports.cls = function cls(classes, escaped) {\n  var buf = [];\n  for (var i = 0; i < classes.length; i++) {\n    if (escaped && escaped[i]) {\n      buf.push(exports.escape(joinClasses([classes[i]])));\n    } else {\n      buf.push(joinClasses(classes[i]));\n    }\n  }\n  var text = joinClasses(buf);\n  if (text.length) {\n    return ' class=\"' + text + '\"';\n  } else {\n    return '';\n  }\n};\n\n\nexports.style = function (val) {\n  if (val && typeof val === 'object') {\n    return Object.keys(val).map(function (style) {\n      return style + ':' + val[style];\n    }).join(';');\n  } else {\n    return val;\n  }\n};\n/**\n * Render the given attribute.\n *\n * @param {String} key\n * @param {String} val\n * @param {Boolean} escaped\n * @param {Boolean} terse\n * @return {String}\n */\nexports.attr = function attr(key, val, escaped, terse) {\n  if (key === 'style') {\n    val = exports.style(val);\n  }\n  if ('boolean' == typeof val || null == val) {\n    if (val) {\n      return ' ' + (terse ? key : key + '=\"' + key + '\"');\n    } else {\n      return '';\n    }\n  } else if (0 == key.indexOf('data') && 'string' != typeof val) {\n    if (JSON.stringify(val).indexOf('&') !== -1) {\n      console.warn('Since Jade 2.0.0, ampersands (`&`) in data attributes ' +\n                   'will be escaped to `&amp;`');\n    };\n    if (val && typeof val.toISOString === 'function') {\n      console.warn('Jade will eliminate the double quotes around dates in ' +\n                   'ISO form after 2.0.0');\n    }\n    return ' ' + key + \"='\" + JSON.stringify(val).replace(/'/g, '&apos;') + \"'\";\n  } else if (escaped) {\n    if (val && typeof val.toISOString === 'function') {\n      console.warn('Jade will stringify dates in ISO form after 2.0.0');\n    }\n    return ' ' + key + '=\"' + exports.escape(val) + '\"';\n  } else {\n    if (val && typeof val.toISOString === 'function') {\n      console.warn('Jade will stringify dates in ISO form after 2.0.0');\n    }\n    return ' ' + key + '=\"' + val + '\"';\n  }\n};\n\n/**\n * Render the given attributes object.\n *\n * @param {Object} obj\n * @param {Object} escaped\n * @return {String}\n */\nexports.attrs = function attrs(obj, terse){\n  var buf = [];\n\n  var keys = Object.keys(obj);\n\n  if (keys.length) {\n    for (var i = 0; i < keys.length; ++i) {\n      var key = keys[i]\n        , val = obj[key];\n\n      if ('class' == key) {\n        if (val = joinClasses(val)) {\n          buf.push(' ' + key + '=\"' + val + '\"');\n        }\n      } else {\n        buf.push(exports.attr(key, val, false, terse));\n      }\n    }\n  }\n\n  return buf.join('');\n};\n\n/**\n * Escape the given string of `html`.\n *\n * @param {String} html\n * @return {String}\n * @api private\n */\n\nvar jade_encode_html_rules = {\n  '&': '&amp;',\n  '<': '&lt;',\n  '>': '&gt;',\n  '\"': '&quot;'\n};\nvar jade_match_html = /[&<>\"]/g;\n\nfunction jade_encode_char(c) {\n  return jade_encode_html_rules[c] || c;\n}\n\nexports.escape = jade_escape;\nfunction jade_escape(html){\n  var result = String(html).replace(jade_match_html, jade_encode_char);\n  if (result === '' + html) return html;\n  else return result;\n};\n\n/**\n * Re-throw the given `err` in context to the\n * the jade in `filename` at the given `lineno`.\n *\n * @param {Error} err\n * @param {String} filename\n * @param {String} lineno\n * @api private\n */\n\nexports.rethrow = function rethrow(err, filename, lineno, str){\n  if (!(err instanceof Error)) throw err;\n  if ((typeof window != 'undefined' || !filename) && !str) {\n    err.message += ' on line ' + lineno;\n    throw err;\n  }\n  try {\n    str = str || require('fs').readFileSync(filename, 'utf8')\n  } catch (ex) {\n    rethrow(err, null, lineno)\n  }\n  var context = 3\n    , lines = str.split('\\n')\n    , start = Math.max(lineno - context, 0)\n    , end = Math.min(lines.length, lineno + context);\n\n  // Error context\n  var context = lines.slice(start, end).map(function(line, i){\n    var curr = i + start + 1;\n    return (curr == lineno ? '  > ' : '    ')\n      + curr\n      + '| '\n      + line;\n  }).join('\\n');\n\n  // Alter exception message\n  err.path = filename;\n  err.message = (filename || 'Jade') + ':' + lineno\n    + '\\n' + context + '\\n\\n' + err.message;\n  throw err;\n};\n\nexports.DebugItem = function DebugItem(lineno, filename) {\n  this.lineno = lineno;\n  this.filename = filename;\n}\n"
+    },
+    {
+      "id": 10,
+      "identifier": "ignored /Users/learn/webpack-screencast/code/project/node_modules/jade/lib fs",
+      "name": "fs (ignored)",
+      "index": 10,
+      "index2": 6,
+      "size": 15,
+      "cacheable": true,
+      "built": false,
+      "optional": true,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": "/Users/learn/webpack-screencast/code/project/node_modules/jade/lib/runtime.js",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 9,
+          "moduleIdentifier": "/Users/learn/webpack-screencast/code/project/node_modules/jade/lib/runtime.js",
+          "module": "../~/jade/lib/runtime.js",
+          "moduleName": "../~/jade/lib/runtime.js",
+          "type": "cjs require",
+          "userRequest": "fs",
+          "loc": "218:17-30"
+        }
+      ]
+    }
+  ],
+  "filteredModules": 0,
+  "children": []
+}
