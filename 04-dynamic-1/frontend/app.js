@@ -13,10 +13,8 @@ document.getElementById('loginButton').onclick = function() {
 
 document.getElementById('logoutButton').onclick = function() {
 
-  // ======== Способ 1 (require.ensure) ==
-  require.ensure([], function(require) {
-    let logout = require('./logout');
-
+  // ======== Способ 2 (AMD) ==
+  require(['./logout'], function(logout) {
     logout();
   }, 'auth');
 
