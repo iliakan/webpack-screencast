@@ -54,7 +54,6 @@ var home =
 	exports.welcome = welcome;
 
 
-
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
