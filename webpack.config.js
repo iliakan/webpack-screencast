@@ -7,6 +7,8 @@
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 
+// module.exports = [{}, {}, {}];
+
 module.exports = {
   context: __dirname + '/frontend',
   entry: {
