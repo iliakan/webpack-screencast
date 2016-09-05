@@ -30,6 +30,17 @@ module.exports = {
     })
   ],
 
+  resolve: {
+    modulesDirectories: ['node_modules'], // Где искать модули
+    extensions:         ['', '.js'] // С какими расширениями
+  },
+
+  resolveLoader: {
+    modulesDirectories: ['node_modules'], // Где искать лоадеры
+    moduleTemplates:    ['*-loader', '*'], // Шаблон поиска
+    extensions:         ['', '.js'] // С какими расширениями
+  },
+
   module: {
     loaders: [{
       test:    /\.js$/,
