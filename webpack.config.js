@@ -1,3 +1,7 @@
+// webpack --display-modules – показывает в какие файлы пошли модули при сборке
+// webpack --display-modules -v – более подробная информация о модулях при сборке
+// webpack --json --profile >stats.json – получение файла со статистикой http://webpack.github.io/analyse/ - сайт для анализа файла
+
 'use strict';
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
