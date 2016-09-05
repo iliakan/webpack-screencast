@@ -1,5 +1,5 @@
 var home =
-webpackJsonp_name_([1],[
+webpackJsonp_name_([2],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
