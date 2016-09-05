@@ -33,6 +33,10 @@ module.exports = {
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(NODE_ENV),
       LANG:     JSON.stringify('ru')
+    }),
+    // Если плагин не настраивать, то он вынесет код, который используется во всех точках входа.
+    new webpack.optimize.CommonsChunkPlugin({
+      name: "common"
     })
   ],
 
