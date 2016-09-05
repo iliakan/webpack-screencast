@@ -32,15 +32,20 @@ module.exports = {
   devtool: NODE_ENV == 'development' ? 'cheap-inline-module-source-map' : null,
 
   plugins: [
+    // http://webpack.github.io/docs/list-of-plugins.html#noerrorsplugin
     new webpack.NoErrorsPlugin(),
     // Определение переменных
+    // http://webpack.github.io/docs/list-of-plugins.html#defineplug
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(NODE_ENV),
       LANG:     JSON.stringify('ru')
     }),
     // Если плагин не настраивать, то он вынесет код, который используется во всех точках входа.
+    // http://webpack.github.io/docs/list-of-plugins.html#commonschunkplugin
     new webpack.optimize.CommonsChunkPlugin({
-      name: "common"
+      name: "common",
+      // minChunks: 2 // Мин. кол-во модулей, необходимое для выноса общего функционала
+      chunks: ['about', 'home'] // Выносит общий функционал для описанных модулей. Для других файлов, плагин можно использовать еще раз
     })
   ],
 
