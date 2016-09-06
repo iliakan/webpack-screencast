@@ -73,7 +73,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "" + chunkId + "." + ({}[chunkId]||chunkId) + ".js";
+/******/ 			script.src = __webpack_require__.p + "" + chunkId + "." + ({"1":"auth"}[chunkId]||chunkId) + ".js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -110,6 +110,17 @@
 	  // require(['./login'], function(login) {
 	  //   login();
 	  // });
+
+	};
+
+	document.getElementById('logoutButton').onclick = function() {
+
+	    // ======== Способ 1 (require.ensure) ==
+	    __webpack_require__.e/* nsure */(1, function(require) {
+	        let logout = __webpack_require__(2);
+
+	        logout();
+	    });
 
 	};
 

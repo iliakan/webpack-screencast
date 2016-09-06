@@ -1,3 +1,11 @@
+// LimitChunkCountPlugin
+// http://webpack.github.io/docs/list-of-plugins.html#limitchunkcountplugin
+// можна задать максимальное количество кусочков
+
+// MinChunkSizePlugin
+// http://webpack.github.io/docs/list-of-plugins.html#minchunksizeplugin
+// минимальный размер кусочка
+
 'use strict';
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
