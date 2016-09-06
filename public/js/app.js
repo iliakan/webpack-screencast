@@ -48,9 +48,24 @@
 
 	let moduleName = location.pathname.slice(1);
 
-	// http://webpack.github.io/docs/context.html
-	let route = __webpack_require__(5)("./" + moduleName);
-	route();
+	// let context = require.context('./routes/', false);
+	//
+	// let route;
+	// try {
+	//     route = context('./routes/' + moduleName);
+	// } catch (e) {
+	//     alert(e);
+	// }
+	// if(route){
+	//     route();
+	// }
+	//
+	let context = __webpack_require__(7);
+
+	context.keys().forEach(function(path){
+	    let module = context(path);
+	    module();
+	});
 
 /***/ },
 /* 1 */,
@@ -64,16 +79,7 @@
 	};
 
 /***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	module.exports = function () {
-	    alert("cool stuff");
-	};
-
-/***/ },
+/* 3 */,
 /* 4 */
 /***/ function(module, exports) {
 
@@ -84,15 +90,13 @@
 	};
 
 /***/ },
-/* 5 */
+/* 5 */,
+/* 6 */,
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./about": 2,
 		"./about.js": 2,
-		"./cool/stuff": 3,
-		"./cool/stuff.js": 3,
-		"./home": 4,
 		"./home.js": 4
 	};
 	function webpackContext(req) {
@@ -106,7 +110,7 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 5;
+	webpackContext.id = 7;
 
 
 /***/ }
