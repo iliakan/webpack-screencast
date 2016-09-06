@@ -1,7 +1,5 @@
 'use strict';
 
 module.exports = function() {
-  alert("login");
+  alert('about');
 };
-
-

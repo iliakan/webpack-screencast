@@ -1,28 +1,7 @@
 "use strict";
 
-document.getElementById('loginButton').onclick = function() {
+let moduleName = location.pathname.slice(1);
 
-  // ======== Способ 1 (require.ensure) ==
-  require.ensure([], function(require) {
-    let login = require('./login');
-
-    login();
-  }, 'auth');
-
-  // Способ 2 (AMD)
-  // require(['./login'], function(login) {
-  //   login();
-  // });
-
-};
-
-document.getElementById('logoutButton').onclick = function() {
-
-    // ======== Способ 1 (require.ensure) ==
-    require.ensure([], function(require) {
-        let logout = require('./logout');
-
-        logout();
-    }, 'auth');
-
-};
+// http://webpack.github.io/docs/context.html
+let route = require('./routes/' + moduleName);
+route();
