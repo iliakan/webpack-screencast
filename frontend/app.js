@@ -2,21 +2,18 @@
 
 let moduleName = location.pathname.slice(1);
 
-// let context = require.context('./routes/', false);
-//
-// let route;
-// try {
-//     route = context('./routes/' + moduleName);
-// } catch (e) {
-//     alert(e);
-// }
-// if(route){
-//     route();
-// }
-//
-let context = require.context('./routes/', false, /\.js$/);
+let handler;
+try {
+    // handler = require('bundle!./routes/' + moduleName)
+    // http://webpack.github.io/docs/context.html#require-context
+    let context = require.context('bundle!./routes/', true, /^\.\//);
+    handler = context('./' + moduleName);
+} catch (e) {
+    alert("No such path");
+}
 
-context.keys().forEach(function(path){
-    let module = context(path);
-    module();
-});
+if (handler) {
+    handler(function(route) {
+        route();
+    });
+}
