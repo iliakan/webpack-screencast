@@ -1,21 +1,28 @@
+// webpack --profile --display-modules --display-reasons
+
 'use strict';
 
-const webpack = require('webpack');
-
 module.exports = {
-    context: './frontend',
-    entry: './app',
+    context: __dirname + '/frontend',
+    entry:   './app',
 
     output: {
         path:       __dirname + '/public',
-        publicPath: '/',
         filename:   "app.js"
     },
 
-    plugins: [
-        new webpack.ProvidePlugin({
-            pluck: 'lodash/collection/pluck',
-            _: 'lodash'
-        })
-    ]
+    module: {
+        loaders: [{
+            test:    /\.js$/,
+            include: __dirname + '/frontend',
+            // exclude: /\/node_modules\//,
+            loader: 'babel',
+            query: {
+                presets: ['es2015'],
+                plugins: ['transform-runtime']
+            }
+        }],
+
+        noParse: /angular\/angular.js/
+    }
 };

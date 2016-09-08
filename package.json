@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.5.8",
     "autoprefixer-loader": "^3.1.0",
     "babel": "^6.0.15",
     "babel-core": "^6.0.14",
