@@ -1,19 +1,7 @@
 "use strict";
 
-let moduleName = location.pathname.slice(1);
+let moment = require('moment');
 
-let handler;
-try {
-    // handler = require('bundle!./routes/' + moduleName)
-    // http://webpack.github.io/docs/context.html#require-context
-    let context = require.context('bundle!./routes/', true, /^\.\//);
-    handler = context('./' + moduleName);
-} catch (e) {
-    alert("No such path");
-}
+let today = moment(new Date()).locale('ru');
 
-if (handler) {
-    handler(function(route) {
-        route();
-    });
-}
+alert(today.format('DD MMM YYYY'));

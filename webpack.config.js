@@ -1,10 +1,14 @@
-// LimitChunkCountPlugin
-// http://webpack.github.io/docs/list-of-plugins.html#limitchunkcountplugin
-// можна задать максимальное количество кусочков
-
-// MinChunkSizePlugin
-// http://webpack.github.io/docs/list-of-plugins.html#minchunksizeplugin
-// минимальный размер кусочка
+/**
+ * webpack --display-modules – показывает в какие файлы пошли модули при сборке
+ *
+ * http://webpack.github.io/docs/list-of-plugins.html#contextreplacementplugin
+ *
+ * в moment.js строку
+ * require('./locale/' + name);
+ * заменяет
+ * require.context('./locale/', true, /^\.\//)('./' + name)
+ *
+ */
 
 'use strict';
 
@@ -31,7 +35,8 @@ module.exports = {
     },
 
     plugins: [
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        new webpack.ContextReplacementPlugin(/node_modules\/moment\/locale/, /ru|en-gb/)
     ],
 
     resolve: {
