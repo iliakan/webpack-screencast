@@ -1,12 +1,7 @@
 /**
  * webpack --display-modules – показывает в какие файлы пошли модули при сборке
  *
- * http://webpack.github.io/docs/list-of-plugins.html#contextreplacementplugin
- *
- * в moment.js строку
- * require('./locale/' + name);
- * заменяет
- * require.context('./locale/', true, /^\.\//)('./' + name)
+ * http://webpack.github.io/docs/list-of-plugins.html#ignoreplugin
  *
  */
 
@@ -36,7 +31,9 @@ module.exports = {
 
     plugins: [
         new webpack.NoErrorsPlugin(),
-        new webpack.ContextReplacementPlugin(/node_modules\/moment\/locale/, /ru|en-gb/)
+        // new webpack.ContextReplacementPlugin(/node_modules\/moment\/locale/, /ru|en-gb/)
+        // new webpack.IgnorePlugin(/zh-/)
+        new webpack.IgnorePlugin(/\.\/locale/)
     ],
 
     resolve: {
