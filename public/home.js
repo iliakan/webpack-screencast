@@ -46,30 +46,38 @@
 
 	'use strict';
 
+	// let old = require('imports?workSettings=>{delay:500}!exports?Work!old');
 	let old = __webpack_require__(1);
 
 	old();
 
 /***/ },
 /* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(2)(__webpack_require__(3))
+
+/***/ },
+/* 2 */
 /***/ function(module, exports) {
 
-	/*** IMPORTS FROM imports-loader ***/
-	var workSettings = {delay:500};
-
-
-	function Work() {
-	  setTimeout(function() {
-	    alert("work complete!");
-	  }, workSettings.delay);
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	module.exports = function(src) {
+		if (typeof execScript !== "undefined")
+			execScript(src);
+		else
+			eval.call(null, src);
 	}
 
 
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
 
-
-	/*** EXPORTS FROM exports-loader ***/
-	module.exports = Work;
-
+	module.exports = "\nfunction Work() {\n  setTimeout(function() {\n    alert(\"work complete!\");\n  }, workSettings.delay);\n}\n\n\n"
 
 /***/ }
 /******/ ]);

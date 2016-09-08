@@ -1,5 +1,6 @@
-// http://webpack.github.io/docs/shimming-modules.html#imports-loader
-// http://webpack.github.io/docs/shimming-modules.html#exports-loader
+// http://webpack.github.io/docs/shimming-modules.html#expose-loader
+// http://webpack.github.io/docs/shimming-modules.html#script-loader
+
 
 'use strict';
 
@@ -15,7 +16,8 @@ module.exports = {
     module: {
         loaders: [{
             test: /old.js$/,
-            loader: "imports?workSettings=>{delay:500}!exports?Work"
+            // loader: "expose?Work!imports?workSettings=>{delay:500}!exports?Work"
+            loader: 'script'
         }]
     },
 
