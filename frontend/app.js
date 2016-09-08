@@ -1,7 +1,12 @@
 "use strict";
 
-let moment = require('moment');
+let _ = require('lodash');
 
-let today = moment(new Date()).locale('ru');
+let users = [
+    {id: "abcd", name: "Vasya"},
+    {id: "defa", name: "Petya"},
+    {id: "1234", name: "Masha"}
+];
 
-alert(today.format('DD MMM YYYY'));
+
+console.log( _.pluck(users, 'name') );
