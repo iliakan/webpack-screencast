@@ -1,0 +1,23 @@
+//@import "~bootstrap/dist/css/bootstrap.css"
+
+.menu
+
+  .list
+    display none
+    margin 0
+
+  .title
+    font-weight bold
+    cursor pointer
+    background url(plus.svg) left 1px no-repeat
+    background-size 14px
+    padding-right 6px
+    padding-left 16px
+
+  &.open
+    .list
+      display block
+
+    .title:before
+      background-image url(minus.svg)
+

@@ -1,31 +1,41 @@
-// http://webpack.github.io/docs/shimming-modules.html#expose-loader
-// http://webpack.github.io/docs/shimming-modules.html#script-loader
-
+// http://webpack.github.io/docs/loaders.html#pitching-loader
 
 'use strict';
 
+let webpack = require('webpack');
+
 module.exports = {
     context: __dirname + '/frontend',
-    entry: './home',
-
-    output: {
-        path:       __dirname + '/public/',
-        filename:   'home.js'
+    entry:   {
+        home: './home'
+    },
+    output:  {
+        path:     __dirname + '/public',
+        filename: '[name].js'
     },
 
     module: {
-        loaders: [{
-            test: /old.js$/,
-            // loader: "expose?Work!imports?workSettings=>{delay:500}!exports?Work"
-            loader: 'script'
-        }]
-    },
 
-    resolve: {
-        root: __dirname + '/vendor',
-        alias: {
-            old: 'old/dist/old'
-        }
+        loaders: [{
+            test:   /\.js$/,
+            loader: "babel",
+            query: {
+                presets: ['es2015']
+            }
+        }, {
+            test:   /\.jade$/,
+            loader: "jade"
+        }, {
+            // autoprefixer?browsers=last 2 version!
+            test:   /\.styl$/,
+            loader: 'style!css!stylus?resolve urls'
+        }, {
+            test:   /\.css/,
+            loader: 'style!css'
+        }, {
+            test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+            loader: 'file?name=[path][name].[ext]'
+        }]
     }
 
 };
