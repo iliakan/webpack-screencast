@@ -12,7 +12,10 @@ module.exports = {
         filename:   "app.js"
     },
 
-    externals: {
-        lodash: '_'
-    }
+    plugins: [
+        new webpack.ProvidePlugin({
+            pluck: 'lodash/collection/pluck',
+            _: 'lodash'
+        })
+    ]
 };

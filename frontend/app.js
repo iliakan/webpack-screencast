@@ -1,6 +1,6 @@
 "use strict";
 
-let _ = require('lodash');
+// let pluck = require('lodash/collection/pluck');
 
 let users = [
     {id: "abcd", name: "Vasya"},
@@ -9,4 +9,4 @@ let users = [
 ];
 
 
-console.log( _.pluck(users, 'name') );
+console.log( pluck(users, 'name') );
