@@ -1,4 +1,5 @@
 // http://webpack.github.io/docs/loaders.html#pitching-loader
+// https://github.com/webpack/style-loader/blob/master/index.js
 
 'use strict';
 
@@ -11,6 +12,7 @@ module.exports = {
     },
     output:  {
         path:     __dirname + '/public',
+        publicPath: '/',
         filename: '[name].js'
     },
 
@@ -34,7 +36,12 @@ module.exports = {
             loader: 'style!css'
         }, {
             test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+            exclude: /\/node_modules\//,
             loader: 'file?name=[path][name].[ext]'
+        }, {
+            test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+            include: /\/node_modules\//,
+            loader: 'file?name=[1].[ext]&regExp=node_modules/(.*)'
         }]
     }
 
