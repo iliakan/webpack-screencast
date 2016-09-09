@@ -1,12 +1,5 @@
-.minus,
-.menu.open .title {
-  background-image: url(/styles/pics/minus.svg);
-}
-.plus,
 .menu .title {
-  background-image: url(/styles/pics/plus.svg);
-}
-.menu .title {
+  background-image: url(/assets/menu/plus.svg);
   padding: 0 6px 0 16px;
   background-position: left 1px;
   background-repeat: no-repeat;
@@ -23,4 +16,7 @@
 }
 .menu.open .list {
   display: block;
+}
+.menu.open .title {
+  background-image: url(/assets/menu/minus.svg);
 }

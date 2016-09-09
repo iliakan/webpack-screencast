@@ -1,74 +1,5 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
-/******/ 			return installedModules[moduleId].exports;
-
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			exports: {},
-/******/ 			id: moduleId,
-/******/ 			loaded: false
-/******/ 		};
-
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
-/******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
-
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-
-
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
-
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(0);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _menu = __webpack_require__(1);
-
-	var _menu2 = _interopRequireDefault(_menu);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var pandaMenu = new _menu2.default({
-	    title: "Меню панды",
-	    items: [{
-	        text: 'Яйца',
-	        href: '#eggs'
-	    }, {
-	        text: 'Мясо',
-	        href: '#meat'
-	    }, {
-	        text: '99% еды - бамбук!',
-	        href: '#bamboo'
-	    }]
-	});
-
-	document.body.appendChild(pandaMenu.elem);
-
-/***/ },
+webpackJsonp_name_([1],[
+/* 0 */,
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -85,6 +16,8 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	__webpack_require__(5);
 
 	var Menu = function Menu(options) {
 	  var _this = this;
@@ -120,7 +53,7 @@
 	var jade_mixins = {};
 	var jade_interp;
 	;var locals_for_with = (locals || {});(function (items, title, undefined) {
-	buf.push("<span class=\"title\">" + (jade.escape(null == (jade_interp = title) ? "" : jade_interp)) + "</span><ul class=\"list\">");
+	buf.push("<span class=\"title\">" + (jade.escape(null == (jade_interp = title) ? "" : jade_interp)) + "</span><ul class=\"list flag-icon-background flag-icon-cn\">");
 	// iterate items
 	;(function(){
 	  var $$obj = items;
@@ -397,5 +330,11 @@
 
 	/* (ignored) */
 
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
 /***/ }
-/******/ ]);
+]);

@@ -1,5 +1,7 @@
 'use strict';
 
+require('./menu.styl');
+
 import template from './menu.jade';
 
 export default class Menu {
