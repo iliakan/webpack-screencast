@@ -1,0 +1,26 @@
+.minus,
+.menu.open .title {
+  background-image: url(/styles/pics/minus.svg);
+}
+.plus,
+.menu .title {
+  background-image: url(/styles/pics/plus.svg);
+}
+.menu .title {
+  padding: 0 6px 0 16px;
+  background-position: left 1px;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.menu .list {
+  display: none;
+  margin: 0;
+}
+.menu .list a {
+  color: #00f;
+}
+.menu.open .list {
+  display: block;
+}

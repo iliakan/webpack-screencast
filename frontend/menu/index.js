@@ -1,7 +1,5 @@
 'use strict';
 
-import './menu.styl';
-
 import template from './menu.jade';
 
 export default class Menu {
