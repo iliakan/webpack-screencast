@@ -1,44 +1,35 @@
-// http://webpack.github.io/docs/loaders.html#pitching-loader
-// https://github.com/webpack/style-loader/blob/master/index.js
-
 'use strict';
-
-let webpack = require('webpack');
 
 module.exports = {
     context: __dirname + '/frontend',
-    entry:   {
-        home: './home'
-    },
+    entry:   './main',
     output:  {
         path:     __dirname + '/public',
         publicPath: '/',
         filename: '[name].js'
     },
 
+    devtool: 'inline-source-map',
+
     module: {
 
         loaders: [{
             test:   /\.js$/,
-            loader: "babel",
-            query: {
-                presets: ['es2015']
-            }
+            loader: "babel?presets[]=es2015"
         }, {
             test:   /\.jade$/,
             loader: "jade"
         }, {
-            // autoprefixer?browsers=last 2 version!
-            test:   /\.styl$/,
-            loader: 'style!css!stylus?resolve urls'
+            test:   /\.css$/,
+            loader: 'style!css!autoprefixer?browsers=last 2 versions'
         }, {
-            test:   /\.css/,
-            loader: 'style!css'
+            test:   /\.styl$/,
+            loader: 'style!css!autoprefixer?browsers=last 2 versions!stylus?resolve url'
         }, {
             test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-            // loader: 'url?name=[path][name].[ext]&limit=4096'
             loader: 'file?name=[path][name].[ext]'
         }]
+
     }
 
 };
