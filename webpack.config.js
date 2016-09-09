@@ -36,12 +36,8 @@ module.exports = {
             loader: 'style!css'
         }, {
             test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-            exclude: /\/node_modules\//,
+            // loader: 'url?name=[path][name].[ext]&limit=4096'
             loader: 'file?name=[path][name].[ext]'
-        }, {
-            test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-            include: /\/node_modules\//,
-            loader: 'file?name=[1].[ext]&regExp=node_modules/(.*)'
         }]
     }
 
