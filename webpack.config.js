@@ -3,8 +3,14 @@
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const AssetsPlugin = require('assets-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const rimraf = require('rimraf');
+
+function addHash(template, hash) {
+    return NODE_ENV == 'production' ?
+        // template.replace(/\.[^.]+$/, `.[${hash}]$&`) : `${template}?hash=[${hash}]`;
+        template.replace(/\.[^.]+$/, `.[${hash}]$&`) : template;
+}
 
 module.exports = {
     context: __dirname + '/frontend',
@@ -16,8 +22,9 @@ module.exports = {
     output:  {
         path:          __dirname + '/public/assets',
         publicPath:    '/assets/',
-        filename:      '[name].js',
-        chunkFilename: '[id].js',
+        // http://webpack.github.io/docs/configuration.html#output-filename
+        filename:      addHash('[name].js', 'chunkhash'),
+        chunkFilename: addHash('[id].js', 'chunkhash'),
         library:       '[name]'
     },
 
@@ -26,7 +33,7 @@ module.exports = {
     },
 
     module: {
-
+        // https://github.com/webpack/loader-utils
         loaders: [{
             test:   /\.js$/,
             loader: "babel?presets[]=es2015"
@@ -35,12 +42,10 @@ module.exports = {
             loader: "jade"
         }, {
             test:   /\.styl$/,
-            // // 1-й арг-т - это лоадер если стили остаются внутри JS (например если какой-то скрипт подкл-ся динамически)
-            // loader: ExtractTextPlugin.extract('style', 'css!stylus?resolve url')
             loader: ExtractTextPlugin.extract('css!stylus?resolve url')
         }, {
             test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-            loader: 'file?name=[path][name].[ext]'
+            loader: addHash('file?name=[path][name].[ext]', 'hash:6')
         }]
 
     },
@@ -51,9 +56,18 @@ module.exports = {
                 rimraf.sync(compiler.options.output.path);
             }
         },
-        new ExtractTextPlugin('[name].css', {allChunks: true}),
+        // https://github.com/webpack/extract-text-webpack-plugin
+        new ExtractTextPlugin(addHash('[name].css', 'contenthash'), {allChunks: true}),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common'
+        }),
+        new HtmlWebpackPlugin({
+            filename: './about.html',
+            chunks: ['common', 'about']
+        }),
+        new HtmlWebpackPlugin({
+            filename: './home.html',
+            chunks: ['common', 'home']
         })
     ]
 };
