@@ -1,73 +1,45 @@
 'use strict';
 
-const NODE_ENV = process.env.NODE_ENV || 'development';
-const webpack = require('webpack');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const rimraf = require('rimraf');
-
-function addHash(template, hash) {
-    return NODE_ENV == 'production' ?
-        // template.replace(/\.[^.]+$/, `.[${hash}]$&`) : `${template}?hash=[${hash}]`;
-        template.replace(/\.[^.]+$/, `.[${hash}]$&`) : template;
-}
+let webpack = require('webpack');
+let ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-    context: __dirname + '/frontend',
-    entry:   {
-        home:   './home',
-        about:  './about',
-        common: './common'
-    },
-    output:  {
-        path:          __dirname + '/public/assets',
-        publicPath:    '/assets/',
-        // http://webpack.github.io/docs/configuration.html#output-filename
-        filename:      addHash('[name].js', 'chunkhash'),
-        chunkFilename: addHash('[id].js', 'chunkhash'),
-        library:       '[name]'
-    },
+  context: __dirname + '/frontend',
+  entry:   {
+    main: './main'
+  },
+  output:  {
+    path:       __dirname + '/public',
+    publicPath: '/',
+    filename:   '[name].js'
+  },
 
-    resolve: {
-        extensions: ['', '.js', '.styl']
-    },
+  module: {
 
-    module: {
-        // https://github.com/webpack/loader-utils
-        loaders: [{
-            test:   /\.js$/,
-            loader: "babel?presets[]=es2015"
-        }, {
-            test:   /\.jade$/,
-            loader: "jade"
-        }, {
-            test:   /\.styl$/,
-            loader: ExtractTextPlugin.extract('css!stylus?resolve url')
-        }, {
-            test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-            loader: addHash('file?name=[path][name].[ext]', 'hash:6')
-        }]
+    loaders: [{
+      test:   /\.js$/,
+      include: __dirname + '/frontend',
+      loader: "babel?presets[]=es2015"
+    }, {
+      test:   /\.jade$/,
+      loader: "jade"
+    }, {
+      test:   /\.styl$/,
+      loader: 'style!css!stylus?resolve url'
+    }, {
+      test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+      loader: 'file?name=[name].[ext]?[hash]'
+    }]
 
-    },
+  },
 
-    plugins: [
-        {
-            apply: (compiler) => {
-                rimraf.sync(compiler.options.output.path);
-            }
-        },
-        // https://github.com/webpack/extract-text-webpack-plugin
-        new ExtractTextPlugin(addHash('[name].css', 'contenthash'), {allChunks: true}),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'common'
-        }),
-        new HtmlWebpackPlugin({
-            filename: './about.html',
-            chunks: ['common', 'about']
-        }),
-        new HtmlWebpackPlugin({
-            filename: './home.html',
-            chunks: ['common', 'home']
-        })
-    ]
+  devServer: {
+
+    host: 'localhost', // default
+    port: 8080, // default
+    contentBase: __dirname + '/backend' // static files, cwd() by default, false to disable
+  }
 };
+
+
+

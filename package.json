@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "concurrently \"node server.js\" \"webpack\""
+    "start": "concurrently \"node server.js\" \"webpack\"",
+    "webpack-dev-server": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
