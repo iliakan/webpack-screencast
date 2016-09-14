@@ -1,8 +1,5 @@
 'use strict';
 
-let webpack = require('webpack');
-let ExtractTextPlugin = require("extract-text-webpack-plugin");
-
 module.exports = {
   context: __dirname + '/frontend',
   entry:   {
@@ -33,11 +30,47 @@ module.exports = {
 
   },
 
+  // devServer: {
+  //
+  //   host: 'localhost', // default
+  //   port: 8080, // default
+  //   // contentBase: __dirname + '/backend' // static files, cwd() by default, false to disable
+  //   proxy: {
+  //     '*': 'http://localhost:3000'
+  //   }
+  // }
   devServer: {
 
-    host: 'localhost', // default
-    port: 8080, // default
-    contentBase: __dirname + '/backend' // static files, cwd() by default, false to disable
+    // Control flow:
+    //   middlware ->
+    //     proxy ->
+    //       historyApiFallback ? -> historyApiFallback, middleware
+    //         -> contentBase
+
+    // proxy:
+    //   array [ { path: '*', target: '"http://localhost:3000" } ]
+    //  or
+    //   object { '*': { target: "http://localhost:3000" } }
+    //  or
+    //   object { '*': "http://localhost:3000" }
+    proxy: [{
+      path:      "dynamic/* or /regexp/",
+      target:    "http://localhost:3000",
+      host:      "proxy.host", // if another HOST header needed for proxy,
+      bypass:    function(req, res, options) {
+        // return URL to rewrite req.url and SKIP PROXY
+        // return false otherwise
+      },
+      rewrite:   function(req, options) {
+        // do something with req if needed
+      },
+      configure: function(proxy) {
+        // do something with http-proxy server instance if needed (add handlers etc)
+      }
+    }],
+
+    contentBase: __dirname + '/backend', // static files, cwd() by default
+    historyApiFallback: true
   }
 };
 
