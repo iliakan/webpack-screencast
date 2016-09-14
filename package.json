@@ -5,7 +5,9 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "concurrently \"node server.js\" \"webpack\"",
-    "webpack-dev-server": "webpack-dev-server"
+    "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server",
+    "webpack-dev-server dev": "NODE_ENV=development webpack-dev-server --inline --hot"
   },
   "author": "",
   "license": "ISC",

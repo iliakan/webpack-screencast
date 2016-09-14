@@ -1,11 +1,16 @@
 'use strict';
 
+const webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
   context: __dirname + '/frontend',
-  entry:   {
+
+  entry: {  // --inline --hot
     main: './main'
   },
-  output:  {
+
+  output: {
     path:       __dirname + '/public',
     publicPath: '/',
     filename:   '[name].js'
@@ -14,63 +19,29 @@ module.exports = {
   module: {
 
     loaders: [{
-      test:   /\.js$/,
+      test:    /\.js$/,
       include: __dirname + '/frontend',
-      loader: "babel?presets[]=es2015"
+      loader:  "babel?presets[]=es2015"
     }, {
       test:   /\.jade$/,
       loader: "jade"
     }, {
       test:   /\.styl$/,
-      loader: 'style!css!stylus?resolve url'
+      loader: ExtractTextPlugin.extract('style', 'css!stylus?resolve url')
     }, {
       test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-      loader: 'file?name=[name].[ext]?[hash]'
+      loader: 'file?name=[path][name].[ext]?[hash]'
     }]
 
   },
 
-  // devServer: {
-  //
-  //   host: 'localhost', // default
-  //   port: 8080, // default
-  //   // contentBase: __dirname + '/backend' // static files, cwd() by default, false to disable
-  //   proxy: {
-  //     '*': 'http://localhost:3000'
-  //   }
-  // }
+  plugins: [
+    new ExtractTextPlugin('[name].css', {allChunks: true, disable: process.env.NODE_ENV=='development'})
+  ],
+
   devServer: {
-
-    // Control flow:
-    //   middlware ->
-    //     proxy ->
-    //       historyApiFallback ? -> historyApiFallback, middleware
-    //         -> contentBase
-
-    // proxy:
-    //   array [ { path: '*', target: '"http://localhost:3000" } ]
-    //  or
-    //   object { '*': { target: "http://localhost:3000" } }
-    //  or
-    //   object { '*': "http://localhost:3000" }
-    proxy: [{
-      path:      "dynamic/* or /regexp/",
-      target:    "http://localhost:3000",
-      host:      "proxy.host", // if another HOST header needed for proxy,
-      bypass:    function(req, res, options) {
-        // return URL to rewrite req.url and SKIP PROXY
-        // return false otherwise
-      },
-      rewrite:   function(req, options) {
-        // do something with req if needed
-      },
-      configure: function(proxy) {
-        // do something with http-proxy server instance if needed (add handlers etc)
-      }
-    }],
-
-    contentBase: __dirname + '/backend', // static files, cwd() by default
-    historyApiFallback: true
+    contentBase: __dirname + '/backend',
+    hot: true
   }
 };
 
